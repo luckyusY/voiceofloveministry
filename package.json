@@ -1,0 +1,23 @@
+{
+  "name": "voice-of-love-ministry",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Coming soon page for Voice of Love Ministry — an NGO spreading hope and compassion.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "15.3.1",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  }
+}
