@@ -1,20 +1,22 @@
 :root {
-  /* Dawn-of-compassion palette */
-  --ink: #0f1c17;          /* deep evergreen ink */
-  --ink-soft: #2a3a31;
-  --ivory: #f6f0e4;        /* warm cream canvas */
-  --ivory-dim: #e9dfca;
-  --cream-card: #fffdf8;
-  --amber: #e0883b;        /* warm sunrise accent */
-  --amber-deep: #c96a2a;
-  --terracotta: #b5532f;
-  --sage: #8fa68a;
-  --sage-deep: #5c7159;
+  /* NGO-style clean palette */
+  --red: #e3001b;          /* primary donate / CTA */
+  --red-dark: #b80016;
+  --ink: #1a1a1a;          /* near-black text */
+  --ink-soft: #4a4a4a;
+  --ink-mute: #6b6b6b;
+  --bg: #ffffff;
+  --bg-alt: #f5f4f1;       /* light section band */
+  --bg-warm: #fbf3ec;      /* warm tint band */
+  --line: #e6e4df;
+  --slate: #14233a;        /* dark footer / contrast band */
+  --slate-soft: #25364f;
 
-  --maxw: 1180px;
+  --gold: #f0a830;
 
-  --font-display: Georgia, "Times New Roman", serif;
-  --font-body: system-ui, sans-serif;
+  --maxw: 1220px;
+
+  --font-sans: system-ui, -apple-system, sans-serif;
 }
 
 * {
@@ -25,7 +27,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 84px;
+  scroll-padding-top: 120px;
 }
 
 html,
@@ -34,13 +36,14 @@ body {
 }
 
 body {
-  background-color: var(--ivory);
+  background-color: var(--bg);
   color: var(--ink);
-  font-family: var(--font-body);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
-  line-height: 1.6;
 }
 
 a {
@@ -48,9 +51,14 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 ::selection {
-  background: var(--amber);
-  color: var(--ink);
+  background: var(--red);
+  color: #fff;
 }
 
 @media (prefers-reduced-motion: reduce) {

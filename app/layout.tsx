@@ -1,18 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Manrope } from "next/font/google";
+import { Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const fraunces = Fraunces({
+const hanken = Hanken_Grotesk({
   subsets: ["latin"],
-  variable: "--font-display",
+  variable: "--font-sans",
   display: "swap",
-  axes: ["opsz", "SOFT", "WONK"],
-});
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-body",
-  display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -28,8 +22,8 @@ export const metadata: Metadata = {
     "God's love",
     "NGO",
     "charity",
+    "donate",
     "community",
-    "compassion",
   ],
   authors: [{ name: "The Voice of Love Family" }],
   openGraph: {
@@ -41,7 +35,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0f1c17",
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({
@@ -49,9 +43,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${fraunces.variable} ${manrope.variable}`}>
-        {children}
-      </body>
+      <body className={hanken.variable}>{children}</body>
     </html>
   );
 }
