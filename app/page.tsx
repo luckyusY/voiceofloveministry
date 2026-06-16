@@ -8,32 +8,59 @@ const PROGRAMS = [
     tag: "Word & Worship",
     title: "Spreading God's love through words, actions, and music",
     text: "We carry the message of love through preaching, song, and everyday acts of kindness.",
-    tint: "rose",
+    img: "/images/band.jpg",
   },
   {
     tag: "Family of Faith",
     title: "Building a family that supports and prays for one another",
     text: "A community where every person is welcomed, encouraged, and held up in prayer.",
-    tint: "blue",
+    img: "/images/youth.jpg",
   },
   {
     tag: "Forgiveness & Truth",
     title: "Inspiring people to live in forgiveness, kindness, and truth",
     text: "We help hearts heal and grow through God's Word, mercy, and honest living.",
-    tint: "gold",
+    img: "/images/preaching.jpg",
   },
   {
     tag: "Compassion in Action",
     title: "Serving communities with compassion and unity",
     text: "Standing with the vulnerable — bringing practical help where it's needed most.",
-    tint: "green",
+    img: "/images/outreach-women.jpg",
+  },
+];
+
+const COUNTRIES = [
+  {
+    name: "United States",
+    role: "Headquarters",
+    text: "Our home base — where worship, leadership, and our global vision are nurtured.",
+    img: "/images/audience.jpg",
+  },
+  {
+    name: "Uganda",
+    role: "Main operations",
+    text: "The heart of our outreach, serving families and communities every season.",
+    img: "/images/teaching.jpg",
+  },
+  {
+    name: "Rwanda",
+    role: "Outreach",
+    text: "Walking with communities through relief, encouragement, and the message of love.",
+    img: "/images/outreach-women.jpg",
+  },
+  {
+    name: "Kenya",
+    role: "Outreach",
+    text: "Sharing hope, provision, and faith with families and young people.",
+    img: "/images/field.jpg",
   },
 ];
 
 const STATS = [
   { n: "10K+", label: "Hearts reached with the message of love" },
+  { n: "4", label: "Nations across two continents" },
   { n: "25+", label: "Communities served together" },
-  { n: "12", label: "Nations touched by the ministry" },
   { n: "100%", label: "Driven by faith, hope, and love" },
 ];
 
@@ -44,19 +71,19 @@ const STORIES = [
     cat: "Testimony",
     date: "Recent",
     title: "“Love gave me a family when I had none.”",
-    tint: "rose",
+    img: "/images/congregation.jpg",
   },
   {
-    cat: "Outreach",
-    date: "This season",
-    title: "Bringing hope and provision to families in need",
-    tint: "green",
+    cat: "Our Team",
+    date: "On the ground",
+    title: "The people carrying the vision across nations",
+    img: "/images/leaders.jpg",
   },
   {
     cat: "Worship",
     date: "Ongoing",
     title: "How music is carrying God's love across nations",
-    tint: "blue",
+    img: "/images/worship-raise.jpg",
   },
 ];
 
@@ -70,7 +97,8 @@ export default function Home() {
         <DonationModule />
         <ImpactBand />
         <Programs />
-        <ValuesStrip />
+        <WhereWeWork />
+        <About />
         <Stories />
         <DeclarationBand />
         <NewsletterCTA />
@@ -84,7 +112,6 @@ export default function Home() {
 function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
     onScroll();
@@ -94,8 +121,8 @@ function Header() {
 
   const links = [
     ["What We Do", "#programs"],
+    ["Where We Work", "#where"],
     ["Who We Are", "#about"],
-    ["Our Values", "#values"],
     ["Stories", "#stories"],
   ];
 
@@ -107,14 +134,12 @@ function Header() {
       </div>
       <div className={styles.navInner}>
         <a href="#top" className={styles.brand}>
-          <span className={styles.brandMark}>
-            <Dove />
-          </span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/logo.png" alt="The Voice of Love" className={styles.brandLogo} />
           <span className={styles.brandText}>
             Voice of Love<em>Family</em>
           </span>
         </a>
-
         <nav className={`${styles.nav} ${open ? styles.navOpen : ""}`}>
           {links.map(([label, href]) => (
             <a key={href} href={href} onClick={() => setOpen(false)}>
@@ -125,7 +150,6 @@ function Header() {
             Donate
           </a>
         </nav>
-
         <button
           className={styles.burger}
           aria-label="Menu"
@@ -143,9 +167,8 @@ function Header() {
 function Hero() {
   return (
     <section id="top" className={styles.hero}>
-      <div className={styles.heroMedia} aria-hidden="true">
-        <div className={styles.heroPattern} />
-      </div>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/images/hero-worship.jpg" alt="" className={styles.heroImg} />
       <div className={styles.heroOverlay} />
       <div className={styles.container}>
         <div className={styles.heroContent}>
@@ -156,7 +179,7 @@ function Hero() {
           <p className={styles.heroText}>
             Love is the greatest voice that can heal hearts, restore hope, and
             unite people across all nations. Stand with us as we live, speak, and
-            share this love.
+            share this love — from the United States to East Africa.
           </p>
           <div className={styles.heroCtas}>
             <a href="#donate" className={styles.btnRed}>
@@ -177,7 +200,6 @@ function DonationModule() {
   const [freq, setFreq] = useState<"once" | "monthly">("monthly");
   const [amount, setAmount] = useState<number | "other">(50);
   const amounts = [25, 50, 100, 250];
-
   return (
     <section id="donate" className={styles.donate}>
       <div className={styles.container}>
@@ -191,23 +213,15 @@ function DonationModule() {
               of faith, and carry hope where it&rsquo;s needed most.
             </p>
           </div>
-
           <div className={styles.donateCard} data-reveal>
             <div className={styles.freqToggle}>
-              <button
-                className={freq === "once" ? styles.freqActive : ""}
-                onClick={() => setFreq("once")}
-              >
+              <button className={freq === "once" ? styles.freqActive : ""} onClick={() => setFreq("once")}>
                 Give once
               </button>
-              <button
-                className={freq === "monthly" ? styles.freqActive : ""}
-                onClick={() => setFreq("monthly")}
-              >
+              <button className={freq === "monthly" ? styles.freqActive : ""} onClick={() => setFreq("monthly")}>
                 Give monthly
               </button>
             </div>
-
             <div className={styles.amountGrid}>
               {amounts.map((a) => (
                 <button
@@ -225,20 +239,16 @@ function DonationModule() {
                 Other
               </button>
             </div>
-
             <p className={styles.donateImpact}>
               {freq === "monthly"
                 ? "A monthly gift gives steady support to families and outreach all year."
                 : "A one-time gift makes an immediate difference where it's needed most."}
             </p>
-
             <a href="#donate" className={styles.btnRedFull}>
               {amount === "other" ? "Continue" : `Donate $${amount}`}
               {freq === "monthly" ? " / month" : ""}
             </a>
-            <p className={styles.donateNote}>
-              Secure giving — payment setup coming soon.
-            </p>
+            <p className={styles.donateNote}>Secure giving — payment setup coming soon.</p>
           </div>
         </div>
       </div>
@@ -280,8 +290,9 @@ function Programs() {
         <div className={styles.programGrid}>
           {PROGRAMS.map((p) => (
             <article className={styles.programCard} key={p.tag} data-reveal>
-              <div className={`${styles.programMedia} ${styles[p.tint]}`} aria-hidden="true">
-                <Dove />
+              <div className={styles.cardMedia}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={p.img} alt={p.tag} loading="lazy" />
               </div>
               <div className={styles.programBody}>
                 <span className={styles.programTag}>{p.tag}</span>
@@ -299,12 +310,49 @@ function Programs() {
   );
 }
 
+/* ---------------- WHERE WE WORK ---------------- */
+function WhereWeWork() {
+  return (
+    <section id="where" className={styles.where}>
+      <div className={styles.container}>
+        <div className={styles.sectionHead} data-reveal>
+          <span className={styles.kicker}>Where we work</span>
+          <h2 className={styles.h2}>One family across two continents</h2>
+          <p className={styles.lead}>
+            From our headquarters in the United States to our outreach across East
+            Africa, the voice of love is carried by one family with one heart.
+          </p>
+        </div>
+        <div className={styles.countryGrid}>
+          {COUNTRIES.map((c) => (
+            <article className={styles.countryCard} key={c.name} data-reveal>
+              <div className={styles.countryMedia}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={c.img} alt={c.name} loading="lazy" />
+                <span className={styles.countryRole}>{c.role}</span>
+              </div>
+              <div className={styles.countryBody}>
+                <h3 className={styles.countryName}>{c.name}</h3>
+                <p>{c.text}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ---------------- ABOUT + VALUES ---------------- */
-function ValuesStrip() {
+function About() {
   return (
     <section id="about" className={styles.about}>
       <div className={styles.container}>
         <div className={styles.aboutGrid}>
+          <div className={styles.aboutMedia} data-reveal>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/team.jpg" alt="The Voice of Love team" loading="lazy" />
+          </div>
           <div data-reveal>
             <span className={styles.kicker}>Who we are</span>
             <h2 className={styles.h2}>A family carrying the message of God&rsquo;s love.</h2>
@@ -318,17 +366,13 @@ function ValuesStrip() {
               heart, every home, and every nation — bringing light where there is
               darkness and peace where there is pain.
             </p>
-          </div>
-          <div id="values" className={styles.valuesPanel} data-reveal>
-            <h3 className={styles.valuesTitle}>Our core values</h3>
-            <ul className={styles.valuesList}>
-              {VALUES.map((v, i) => (
-                <li key={v}>
-                  <span className={styles.valueIndex}>{String(i + 1).padStart(2, "0")}</span>
+            <div id="values" className={styles.valuesRow}>
+              {VALUES.map((v) => (
+                <span className={styles.valueChip} key={v}>
                   {v}
-                </li>
+                </span>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -353,8 +397,9 @@ function Stories() {
         <div className={styles.storyGrid}>
           {STORIES.map((s) => (
             <article className={styles.storyCard} key={s.title} data-reveal>
-              <div className={`${styles.storyMedia} ${styles[s.tint]}`} aria-hidden="true">
-                <Dove />
+              <div className={styles.cardMedia}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={s.img} alt={s.cat} loading="lazy" />
               </div>
               <div className={styles.storyBody}>
                 <span className={styles.storyMeta}>
@@ -377,6 +422,9 @@ function Stories() {
 function DeclarationBand() {
   return (
     <section className={styles.declaration}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/images/congregation.jpg" alt="" className={styles.declarationBg} />
+      <div className={styles.declarationVeil} />
       <div className={styles.container}>
         <figure data-reveal>
           <Quote />
@@ -439,7 +487,7 @@ function NewsletterCTA() {
 function Footer() {
   const cols = [
     ["What We Do", ["Word & Worship", "Family of Faith", "Forgiveness & Truth", "Compassion in Action"]],
-    ["Who We Are", ["Our Story", "Our Vision", "Our Values", "Our Declaration"]],
+    ["Where We Work", ["United States (HQ)", "Uganda", "Rwanda", "Kenya"]],
     ["Get Involved", ["Donate", "Give Monthly", "Volunteer", "Pray With Us"]],
   ] as const;
   return (
@@ -448,9 +496,8 @@ function Footer() {
         <div className={styles.footerTop}>
           <div className={styles.footerBrand}>
             <a href="#top" className={styles.brand}>
-              <span className={styles.brandMark}>
-                <Dove />
-              </span>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/logo.png" alt="The Voice of Love" className={styles.brandLogo} />
               <span className={styles.brandText}>
                 Voice of Love<em>Family</em>
               </span>
@@ -510,14 +557,6 @@ function useReveal() {
 }
 
 /* ---------------- ICONS ---------------- */
-function Dove() {
-  return (
-    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true">
-      <path d="M3 13c4 1 7-1 9-5 1 3 3 4 6 4-1 4-5 7-9 7-3 0-6-2-6-6Z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
-      <path d="M12 8c2-3 5-4 8-3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-    </svg>
-  );
-}
 function Arrow() {
   return (
     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true">

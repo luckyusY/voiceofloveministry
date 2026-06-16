@@ -1,18 +1,22 @@
 :root {
-  /* NGO-style clean palette */
-  --red: #e3001b;          /* primary donate / CTA */
-  --red-dark: #b80016;
+  /* Brand palette — sampled from the Voice of Love logo */
+  --red: #d80060;          /* primary donate / CTA (logo magenta-pink) */
+  --red-dark: #b00050;
+  --blue: #0066b0;         /* logo blue figure */
+  --blue-dark: #004a85;
+  --teal: #178a8a;         /* logo teal figure */
+  --teal-dark: #0f6d6d;
   --ink: #1a1a1a;          /* near-black text */
   --ink-soft: #4a4a4a;
   --ink-mute: #6b6b6b;
   --bg: #ffffff;
-  --bg-alt: #f5f4f1;       /* light section band */
-  --bg-warm: #fbf3ec;      /* warm tint band */
-  --line: #e6e4df;
-  --slate: #14233a;        /* dark footer / contrast band */
-  --slate-soft: #25364f;
+  --bg-alt: #f4f6f8;       /* light section band */
+  --bg-warm: #fdf0f5;      /* soft pink tint band */
+  --line: #e4e7ea;
+  --slate: #06314f;        /* deep navy footer / contrast band (logo navy) */
+  --slate-soft: #0d4a6e;
 
-  --gold: #f0a830;
+  --gold: #15a0a0;         /* highlight accent (teal) */
 
   --maxw: 1220px;
 
