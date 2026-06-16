@@ -16,23 +16,26 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Voice of Love Ministry — Coming Soon",
+  title: "The Voice of Love Family — Speaking God's Love to Every Nation",
   description:
-    "Voice of Love Ministry is a non-profit dedicated to carrying hope, compassion, and dignity to communities in need. Our new home is coming soon.",
+    "The Voice of Love Family is a community built on the message of God's love — spreading hope, faith, and compassion through words, actions, and service to communities everywhere.",
   keywords: [
+    "Voice of Love",
+    "Voice of Love Family",
     "Voice of Love Ministry",
+    "Christian ministry",
+    "faith",
+    "God's love",
     "NGO",
-    "non-profit",
     "charity",
-    "ministry",
-    "compassion",
     "community",
+    "compassion",
   ],
-  authors: [{ name: "Voice of Love Ministry" }],
+  authors: [{ name: "The Voice of Love Family" }],
   openGraph: {
-    title: "Voice of Love Ministry — Coming Soon",
+    title: "The Voice of Love Family",
     description:
-      "Hope is on the way. Voice of Love Ministry's new website is coming soon.",
+      "A generation chosen to speak God's love, bring hope to the hopeless, and unite the world through the power of love.",
     type: "website",
   },
 };
