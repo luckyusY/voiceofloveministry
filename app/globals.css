@@ -20,7 +20,8 @@
 
   --maxw: 1220px;
 
-  --font-sans: system-ui, -apple-system, sans-serif;
+  --font-display: "Georgia", serif;   /* overridden by next/font (Fraunces) */
+  --font-body: system-ui, sans-serif; /* overridden by next/font (Hanken Grotesk) */
 }
 
 * {
@@ -42,7 +43,7 @@ body {
 body {
   background-color: var(--bg);
   color: var(--ink);
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 17px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;

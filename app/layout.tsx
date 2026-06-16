@@ -1,29 +1,40 @@
 import type { Metadata, Viewport } from "next";
-import { Hanken_Grotesk } from "next/font/google";
+import { Fraunces, Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const hanken = Hanken_Grotesk({
+const display = Fraunces({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-display",
   display: "swap",
-  weight: ["400", "500", "600", "700", "800", "900"],
+  axes: ["opsz", "SOFT", "WONK"],
+});
+
+const body = Hanken_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
-  title: "The Voice of Love Family — Speaking God's Love to Every Nation",
+  title: {
+    default: "The Voice of Love Family — Speaking God's Love to Every Nation",
+    template: "%s · The Voice of Love Family",
+  },
   description:
-    "The Voice of Love Family is a community built on the message of God's love — spreading hope, faith, and compassion through words, actions, and service to communities everywhere.",
+    "The Voice of Love Family is a community built on the message of God's love — spreading hope, faith, and compassion through worship, words, and service from the United States to East Africa.",
   keywords: [
     "Voice of Love",
     "Voice of Love Family",
-    "Voice of Love Ministry",
     "Christian ministry",
     "faith",
     "God's love",
     "NGO",
     "charity",
     "donate",
-    "community",
+    "Uganda",
+    "Rwanda",
+    "Kenya",
   ],
   authors: [{ name: "The Voice of Love Family" }],
   openGraph: {
@@ -35,7 +46,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#ffffff",
+  themeColor: "#06314f",
 };
 
 export default function RootLayout({
@@ -43,7 +54,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={hanken.variable}>{children}</body>
+      <body className={`${display.variable} ${body.variable}`}>{children}</body>
     </html>
   );
 }

@@ -1,562 +1,281 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import styles from "./page.module.css";
+import Link from "next/link";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Reveal from "./components/Reveal";
+import NewsletterForm from "./components/NewsletterForm";
+import s from "./ui.module.css";
 
 const PROGRAMS = [
-  {
-    tag: "Word & Worship",
-    title: "Spreading God's love through words, actions, and music",
-    text: "We carry the message of love through preaching, song, and everyday acts of kindness.",
-    img: "/images/band.jpg",
-  },
-  {
-    tag: "Family of Faith",
-    title: "Building a family that supports and prays for one another",
-    text: "A community where every person is welcomed, encouraged, and held up in prayer.",
-    img: "/images/youth.jpg",
-  },
-  {
-    tag: "Forgiveness & Truth",
-    title: "Inspiring people to live in forgiveness, kindness, and truth",
-    text: "We help hearts heal and grow through God's Word, mercy, and honest living.",
-    img: "/images/preaching.jpg",
-  },
-  {
-    tag: "Compassion in Action",
-    title: "Serving communities with compassion and unity",
-    text: "Standing with the vulnerable — bringing practical help where it's needed most.",
-    img: "/images/outreach-women.jpg",
-  },
+  { tag: "Word & Worship", title: "Love through words, actions & music", text: "We carry the message of love through preaching, song, and everyday kindness.", img: "/images/band.jpg" },
+  { tag: "Family of Faith", title: "A family that prays for one another", text: "A community where every person is welcomed, encouraged, and held in prayer.", img: "/images/youth.jpg" },
+  { tag: "Forgiveness & Truth", title: "Living in forgiveness & truth", text: "We help hearts heal and grow through God's Word, mercy, and honest living.", img: "/images/preaching.jpg" },
+  { tag: "Compassion in Action", title: "Serving with compassion & unity", text: "Standing with the vulnerable — bringing practical help where it's needed most.", img: "/images/outreach-women.jpg" },
 ];
 
 const COUNTRIES = [
-  {
-    name: "United States",
-    role: "Headquarters",
-    text: "Our home base — where worship, leadership, and our global vision are nurtured.",
-    img: "/images/audience.jpg",
-  },
-  {
-    name: "Uganda",
-    role: "Main operations",
-    text: "The heart of our outreach, serving families and communities every season.",
-    img: "/images/teaching.jpg",
-  },
-  {
-    name: "Rwanda",
-    role: "Outreach",
-    text: "Walking with communities through relief, encouragement, and the message of love.",
-    img: "/images/outreach-women.jpg",
-  },
-  {
-    name: "Kenya",
-    role: "Outreach",
-    text: "Sharing hope, provision, and faith with families and young people.",
-    img: "/images/field.jpg",
-  },
+  { name: "United States", role: "Headquarters", img: "/images/audience.jpg" },
+  { name: "Uganda", role: "Main operations", img: "/images/teaching.jpg" },
+  { name: "Rwanda", role: "Outreach", img: "/images/outreach-women.jpg" },
+  { name: "Kenya", role: "Outreach", img: "/images/field.jpg" },
 ];
 
 const STATS = [
   { n: "10K+", label: "Hearts reached with the message of love" },
   { n: "4", label: "Nations across two continents" },
   { n: "25+", label: "Communities served together" },
-  { n: "100%", label: "Driven by faith, hope, and love" },
+  { n: "100%", label: "Driven by faith, hope & love" },
 ];
 
-const VALUES = ["Love", "Faith", "Unity", "Service", "Truth"];
-
 const STORIES = [
-  {
-    cat: "Testimony",
-    date: "Recent",
-    title: "“Love gave me a family when I had none.”",
-    img: "/images/congregation.jpg",
-  },
-  {
-    cat: "Our Team",
-    date: "On the ground",
-    title: "The people carrying the vision across nations",
-    img: "/images/leaders.jpg",
-  },
-  {
-    cat: "Worship",
-    date: "Ongoing",
-    title: "How music is carrying God's love across nations",
-    img: "/images/worship-raise.jpg",
-  },
+  { cat: "Testimony", date: "Recent", title: "“Love gave me a family when I had none.”", img: "/images/congregation.jpg" },
+  { cat: "Our Team", date: "On the ground", title: "The people carrying the vision across nations", img: "/images/leaders.jpg" },
+  { cat: "Worship", date: "Ongoing", title: "How music is carrying God's love across nations", img: "/images/worship-raise.jpg" },
 ];
 
 export default function Home() {
-  useReveal();
   return (
     <>
       <Header />
       <main>
-        <Hero />
-        <DonationModule />
-        <ImpactBand />
-        <Programs />
-        <WhereWeWork />
-        <About />
-        <Stories />
-        <DeclarationBand />
-        <NewsletterCTA />
+        {/* HERO */}
+        <section className={s.hero}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/hero-worship.jpg" alt="" className={s.heroImg} />
+          <div className={s.heroOverlay} />
+          <div className={s.container}>
+            <div className={s.heroContent}>
+              <span className={s.flag}>A community built on God&rsquo;s love</span>
+              <h1 className={s.heroTitle}>
+                The voice of <em className={s.italicAccent}>love</em>, heard in
+                every nation.
+              </h1>
+              <p className={s.heroText}>
+                Love is the greatest voice that can heal hearts, restore hope, and
+                unite people across all nations. Stand with us as we live, speak,
+                and share this love — from the United States to East Africa.
+              </p>
+              <div className={s.heroCtas}>
+                <Link href="/donate" className={s.btnPrimary}>
+                  Donate now <Arrow />
+                </Link>
+                <Link href="/about" className={s.btnOutlineLight}>
+                  Discover our story
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* IMPACT */}
+        <section className={s.impact}>
+          <div className={s.container}>
+            <div className={s.impactGrid}>
+              {STATS.map((st) => (
+                <Reveal className={s.stat} key={st.label}>
+                  <span className={s.statNum}>{st.n}</span>
+                  <span className={s.statLabel}>{st.label}</span>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* PROGRAMS */}
+        <section id="programs" className={s.section}>
+          <div className={s.container}>
+            <Reveal className={s.head}>
+              <span className={s.kicker}>What we do</span>
+              <h2 className={s.h2}>How we share God&rsquo;s love</h2>
+              <p className={s.lead}>
+                Our mission is to spread love through words, actions, and service —
+                building a family of faith that lifts up every person.
+              </p>
+            </Reveal>
+            <div className={s.grid4}>
+              {PROGRAMS.map((p, i) => (
+                <Reveal as="article" className={s.card} key={p.tag} delay={i * 70}>
+                  <div className={s.cardMedia}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={p.img} alt={p.tag} loading="lazy" />
+                  </div>
+                  <div className={s.cardBody}>
+                    <span className={s.cardTag}>{p.tag}</span>
+                    <h3 className={s.h3}>{p.title}</h3>
+                    <p>{p.text}</p>
+                    <Link href="/donate" className={s.textLink}>
+                      Support this <Arrow />
+                    </Link>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* GIVE TEASER */}
+        <section className={s.give}>
+          <div className={s.container}>
+            <div className={s.giveGrid}>
+              <Reveal>
+                <span className={s.kicker}>Be the voice of love</span>
+                <h2 className={s.h2}>
+                  Your gift helps love reach <em className={s.italicAccent}>further.</em>
+                </h2>
+                <p className={s.lead}>
+                  We depend on people who believe love can change the world. Every
+                  gift supports worship, families of faith, and compassionate relief
+                  across two continents.
+                </p>
+                <div className={s.heroCtas}>
+                  <Link href="/donate" className={s.btnPrimary}>
+                    Give today <Arrow />
+                  </Link>
+                  <Link href="/donate" className={s.btnGhost}>
+                    Ways to give
+                  </Link>
+                </div>
+              </Reveal>
+              <Reveal className={s.giveCard} delay={100}>
+                <span className={s.cardTag}>Make a difference</span>
+                <h3 className={s.h3}>Choose an amount to begin</h3>
+                <div className={s.quickAmounts}>
+                  <Link href="/donate">$25</Link>
+                  <Link href="/donate">$50</Link>
+                  <Link href="/donate">$100</Link>
+                </div>
+                <Link href="/donate" className={`${s.btnPrimary} ${s.btnFull}`}>
+                  Continue to donate <Arrow />
+                </Link>
+                <p className={s.payNote}>
+                  <Lock /> Secure giving via Stripe &amp; PayPal
+                </p>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
+        {/* WHERE WE WORK */}
+        <section className={s.section}>
+          <div className={s.container}>
+            <Reveal className={s.headRow}>
+              <div>
+                <span className={s.kicker}>Where we work</span>
+                <h2 className={s.h2}>One family across two continents</h2>
+              </div>
+              <Link href="/where-we-work" className={s.btnOutline}>
+                Explore our regions
+              </Link>
+            </Reveal>
+            <div className={s.grid4}>
+              {COUNTRIES.map((c, i) => (
+                <Reveal as="article" className={s.card} key={c.name} delay={i * 70}>
+                  <div className={s.mediaWrap}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={c.img} alt={c.name} loading="lazy" />
+                    <span className={s.roleBadge}>{c.role}</span>
+                  </div>
+                  <div className={s.cardBody}>
+                    <h3 className={s.h3}>{c.name}</h3>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ABOUT TEASER */}
+        <section className={s.section} style={{ paddingTop: 0 }}>
+          <div className={s.container}>
+            <div className={s.split}>
+              <Reveal className={s.splitMedia}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/team.jpg" alt="The Voice of Love team" loading="lazy" />
+              </Reveal>
+              <Reveal delay={100}>
+                <span className={s.kicker}>Who we are</span>
+                <h2 className={s.h2}>A family carrying the message of God&rsquo;s love.</h2>
+                <p className={s.lead}>
+                  We believe love is the greatest voice that can heal hearts,
+                  restore hope, and unite people across all nations — heard in every
+                  heart, every home, and every nation.
+                </p>
+                <div className={s.chips}>
+                  {["Love", "Faith", "Unity", "Service", "Truth"].map((v) => (
+                    <span className={s.chip} key={v}>{v}</span>
+                  ))}
+                </div>
+                <p style={{ marginTop: "1.6rem" }}>
+                  <Link href="/about" className={s.btnDark}>
+                    Read our story <Arrow />
+                  </Link>
+                </p>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
+        {/* STORIES */}
+        <section id="stories" className={s.section} style={{ paddingTop: 0 }}>
+          <div className={s.container}>
+            <Reveal className={s.headRow}>
+              <div>
+                <span className={s.kicker}>Latest</span>
+                <h2 className={s.h2}>Stories of love at work</h2>
+              </div>
+            </Reveal>
+            <div className={s.grid3}>
+              {STORIES.map((st, i) => (
+                <Reveal as="article" className={s.card} key={st.title} delay={i * 70}>
+                  <div className={s.cardMedia}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={st.img} alt={st.cat} loading="lazy" />
+                  </div>
+                  <div className={s.cardBody}>
+                    <span className={s.cardTag}>{st.cat} · {st.date}</span>
+                    <h3 className={s.h3}>{st.title}</h3>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* DECLARATION */}
+        <section className={s.declaration}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/congregation.jpg" alt="" className={s.declarationBg} />
+          <div className={s.declarationVeil} />
+          <div className={s.container}>
+            <Reveal as="figure">
+              <Quote />
+              <blockquote>
+                We are the Voice of Love Family — a generation chosen to speak
+                God&rsquo;s love, to bring hope to the hopeless, and to unite the
+                world through the power of love.
+              </blockquote>
+              <figcaption>Our Declaration</figcaption>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* NEWSLETTER */}
+        <section className={s.newsletter}>
+          <div className={s.container}>
+            <div className={s.newsInner}>
+              <div>
+                <h2 className={s.h2} style={{ color: "#fff" }}>Join the family</h2>
+                <p>Get updates, prayer, and ways to get involved in your inbox.</p>
+              </div>
+              <NewsletterForm />
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </>
   );
 }
 
-/* ---------------- HEADER ---------------- */
-function Header() {
-  const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  const links = [
-    ["What We Do", "#programs"],
-    ["Where We Work", "#where"],
-    ["Who We Are", "#about"],
-    ["Stories", "#stories"],
-  ];
-
-  return (
-    <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ""}`}>
-      <div className={styles.topbar}>
-        <span>The Voice of Love Family — speaking love to every nation</span>
-        <a href="#donate">Give monthly &rsaquo;</a>
-      </div>
-      <div className={styles.navInner}>
-        <a href="#top" className={styles.brand}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/logo.png" alt="The Voice of Love" className={styles.brandLogo} />
-          <span className={styles.brandText}>
-            Voice of Love<em>Family</em>
-          </span>
-        </a>
-        <nav className={`${styles.nav} ${open ? styles.navOpen : ""}`}>
-          {links.map(([label, href]) => (
-            <a key={href} href={href} onClick={() => setOpen(false)}>
-              {label}
-            </a>
-          ))}
-          <a href="#donate" className={styles.donateBtn} onClick={() => setOpen(false)}>
-            Donate
-          </a>
-        </nav>
-        <button
-          className={styles.burger}
-          aria-label="Menu"
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-        >
-          <span data-open={open} />
-        </button>
-      </div>
-    </header>
-  );
-}
-
-/* ---------------- HERO ---------------- */
-function Hero() {
-  return (
-    <section id="top" className={styles.hero}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/images/hero-worship.jpg" alt="" className={styles.heroImg} />
-      <div className={styles.heroOverlay} />
-      <div className={styles.container}>
-        <div className={styles.heroContent}>
-          <span className={styles.heroFlag}>A community built on God&rsquo;s love</span>
-          <h1 className={styles.heroTitle}>
-            Speaking God&rsquo;s love to every heart, home, and nation.
-          </h1>
-          <p className={styles.heroText}>
-            Love is the greatest voice that can heal hearts, restore hope, and
-            unite people across all nations. Stand with us as we live, speak, and
-            share this love — from the United States to East Africa.
-          </p>
-          <div className={styles.heroCtas}>
-            <a href="#donate" className={styles.btnRed}>
-              Donate now
-            </a>
-            <a href="#about" className={styles.btnOutlineLight}>
-              Learn about us
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ---------------- DONATION MODULE ---------------- */
-function DonationModule() {
-  const [freq, setFreq] = useState<"once" | "monthly">("monthly");
-  const [amount, setAmount] = useState<number | "other">(50);
-  const amounts = [25, 50, 100, 250];
-  return (
-    <section id="donate" className={styles.donate}>
-      <div className={styles.container}>
-        <div className={styles.donateGrid}>
-          <div className={styles.donateLead} data-reveal>
-            <span className={styles.kicker}>Stand with us</span>
-            <h2 className={styles.h2}>Your gift lets the voice of love reach further.</h2>
-            <p className={styles.lead}>
-              We depend on the generosity of people who believe love can change
-              the world. Every gift helps us serve communities, support families
-              of faith, and carry hope where it&rsquo;s needed most.
-            </p>
-          </div>
-          <div className={styles.donateCard} data-reveal>
-            <div className={styles.freqToggle}>
-              <button className={freq === "once" ? styles.freqActive : ""} onClick={() => setFreq("once")}>
-                Give once
-              </button>
-              <button className={freq === "monthly" ? styles.freqActive : ""} onClick={() => setFreq("monthly")}>
-                Give monthly
-              </button>
-            </div>
-            <div className={styles.amountGrid}>
-              {amounts.map((a) => (
-                <button
-                  key={a}
-                  className={`${styles.amountBtn} ${amount === a ? styles.amountActive : ""}`}
-                  onClick={() => setAmount(a)}
-                >
-                  ${a}
-                </button>
-              ))}
-              <button
-                className={`${styles.amountBtn} ${amount === "other" ? styles.amountActive : ""}`}
-                onClick={() => setAmount("other")}
-              >
-                Other
-              </button>
-            </div>
-            <p className={styles.donateImpact}>
-              {freq === "monthly"
-                ? "A monthly gift gives steady support to families and outreach all year."
-                : "A one-time gift makes an immediate difference where it's needed most."}
-            </p>
-            <a href="#donate" className={styles.btnRedFull}>
-              {amount === "other" ? "Continue" : `Donate $${amount}`}
-              {freq === "monthly" ? " / month" : ""}
-            </a>
-            <p className={styles.donateNote}>Secure giving — payment setup coming soon.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ---------------- IMPACT BAND ---------------- */
-function ImpactBand() {
-  return (
-    <section className={styles.impact}>
-      <div className={styles.container}>
-        <div className={styles.impactGrid}>
-          {STATS.map((s) => (
-            <div className={styles.stat} key={s.label} data-reveal>
-              <span className={styles.statNum}>{s.n}</span>
-              <span className={styles.statLabel}>{s.label}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ---------------- PROGRAMS ---------------- */
-function Programs() {
-  return (
-    <section id="programs" className={styles.section}>
-      <div className={styles.container}>
-        <div className={styles.sectionHead} data-reveal>
-          <span className={styles.kicker}>What we do</span>
-          <h2 className={styles.h2}>How we share God&rsquo;s love</h2>
-          <p className={styles.lead}>
-            Our mission is to spread love through words, actions, and service —
-            building a family of faith that lifts up every person.
-          </p>
-        </div>
-        <div className={styles.programGrid}>
-          {PROGRAMS.map((p) => (
-            <article className={styles.programCard} key={p.tag} data-reveal>
-              <div className={styles.cardMedia}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.img} alt={p.tag} loading="lazy" />
-              </div>
-              <div className={styles.programBody}>
-                <span className={styles.programTag}>{p.tag}</span>
-                <h3 className={styles.programTitle}>{p.title}</h3>
-                <p>{p.text}</p>
-                <a href="#donate" className={styles.textLink}>
-                  Support this <Arrow />
-                </a>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ---------------- WHERE WE WORK ---------------- */
-function WhereWeWork() {
-  return (
-    <section id="where" className={styles.where}>
-      <div className={styles.container}>
-        <div className={styles.sectionHead} data-reveal>
-          <span className={styles.kicker}>Where we work</span>
-          <h2 className={styles.h2}>One family across two continents</h2>
-          <p className={styles.lead}>
-            From our headquarters in the United States to our outreach across East
-            Africa, the voice of love is carried by one family with one heart.
-          </p>
-        </div>
-        <div className={styles.countryGrid}>
-          {COUNTRIES.map((c) => (
-            <article className={styles.countryCard} key={c.name} data-reveal>
-              <div className={styles.countryMedia}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={c.img} alt={c.name} loading="lazy" />
-                <span className={styles.countryRole}>{c.role}</span>
-              </div>
-              <div className={styles.countryBody}>
-                <h3 className={styles.countryName}>{c.name}</h3>
-                <p>{c.text}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ---------------- ABOUT + VALUES ---------------- */
-function About() {
-  return (
-    <section id="about" className={styles.about}>
-      <div className={styles.container}>
-        <div className={styles.aboutGrid}>
-          <div className={styles.aboutMedia} data-reveal>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/team.jpg" alt="The Voice of Love team" loading="lazy" />
-          </div>
-          <div data-reveal>
-            <span className={styles.kicker}>Who we are</span>
-            <h2 className={styles.h2}>A family carrying the message of God&rsquo;s love.</h2>
-            <p className={styles.lead}>
-              The Voice of Love Family is a community built on the message of
-              God&rsquo;s love. We believe love is the greatest voice that can heal
-              hearts, restore hope, and unite people across all nations.
-            </p>
-            <p className={styles.aboutVision}>
-              <strong>Our vision:</strong> to let the voice of love be heard in every
-              heart, every home, and every nation — bringing light where there is
-              darkness and peace where there is pain.
-            </p>
-            <div id="values" className={styles.valuesRow}>
-              {VALUES.map((v) => (
-                <span className={styles.valueChip} key={v}>
-                  {v}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ---------------- STORIES ---------------- */
-function Stories() {
-  return (
-    <section id="stories" className={styles.section}>
-      <div className={styles.container}>
-        <div className={styles.sectionHeadRow} data-reveal>
-          <div>
-            <span className={styles.kicker}>Latest</span>
-            <h2 className={styles.h2}>Stories of love at work</h2>
-          </div>
-          <a href="#stories" className={styles.btnOutline}>
-            View all stories
-          </a>
-        </div>
-        <div className={styles.storyGrid}>
-          {STORIES.map((s) => (
-            <article className={styles.storyCard} key={s.title} data-reveal>
-              <div className={styles.cardMedia}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={s.img} alt={s.cat} loading="lazy" />
-              </div>
-              <div className={styles.storyBody}>
-                <span className={styles.storyMeta}>
-                  {s.cat} &middot; {s.date}
-                </span>
-                <h3 className={styles.storyTitle}>{s.title}</h3>
-                <a href="#stories" className={styles.textLink}>
-                  Read more <Arrow />
-                </a>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ---------------- DECLARATION ---------------- */
-function DeclarationBand() {
-  return (
-    <section className={styles.declaration}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/images/congregation.jpg" alt="" className={styles.declarationBg} />
-      <div className={styles.declarationVeil} />
-      <div className={styles.container}>
-        <figure data-reveal>
-          <Quote />
-          <blockquote>
-            We are the Voice of Love Family — a generation chosen to speak
-            God&rsquo;s love, to bring hope to the hopeless, and to unite the world
-            through the power of love.
-          </blockquote>
-          <figcaption>Our Declaration</figcaption>
-        </figure>
-      </div>
-    </section>
-  );
-}
-
-/* ---------------- NEWSLETTER ---------------- */
-function NewsletterCTA() {
-  const [email, setEmail] = useState("");
-  const [done, setDone] = useState(false);
-  function submit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    if (!email) return;
-    setDone(true);
-    setEmail("");
-  }
-  return (
-    <section className={styles.newsletter}>
-      <div className={styles.container}>
-        <div className={styles.newsInner}>
-          <div>
-            <h2 className={styles.h2White}>Join the family</h2>
-            <p>Get updates, prayer, and ways to get involved in your inbox.</p>
-          </div>
-          {done ? (
-            <p className={styles.thanks}>
-              <Check /> Thank you — welcome to the family.
-            </p>
-          ) : (
-            <form className={styles.newsForm} onSubmit={submit}>
-              <input
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Your email address"
-                aria-label="Email address"
-              />
-              <button type="submit" className={styles.btnRed}>
-                Sign up
-              </button>
-            </form>
-          )}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ---------------- FOOTER ---------------- */
-function Footer() {
-  const cols = [
-    ["What We Do", ["Word & Worship", "Family of Faith", "Forgiveness & Truth", "Compassion in Action"]],
-    ["Where We Work", ["United States (HQ)", "Uganda", "Rwanda", "Kenya"]],
-    ["Get Involved", ["Donate", "Give Monthly", "Volunteer", "Pray With Us"]],
-  ] as const;
-  return (
-    <footer id="contact" className={styles.footer}>
-      <div className={styles.container}>
-        <div className={styles.footerTop}>
-          <div className={styles.footerBrand}>
-            <a href="#top" className={styles.brand}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/logo.png" alt="The Voice of Love" className={styles.brandLogo} />
-              <span className={styles.brandText}>
-                Voice of Love<em>Family</em>
-              </span>
-            </a>
-            <p>
-              A generation chosen to speak God&rsquo;s love and unite the world
-              through the power of love.
-            </p>
-            <div className={styles.socials}>
-              <a href="#" aria-label="Facebook">Facebook</a>
-              <a href="#" aria-label="Instagram">Instagram</a>
-              <a href="#" aria-label="YouTube">YouTube</a>
-            </div>
-          </div>
-          {cols.map(([head, items]) => (
-            <div className={styles.footerCol} key={head}>
-              <h4>{head}</h4>
-              {items.map((it) => (
-                <a href="#" key={it}>
-                  {it}
-                </a>
-              ))}
-            </div>
-          ))}
-        </div>
-        <div className={styles.footerBottom}>
-          <span>© {new Date().getFullYear()} The Voice of Love Family. All rights reserved.</span>
-          <span>Speaking love to every heart, home, and nation.</span>
-        </div>
-      </div>
-    </footer>
-  );
-}
-
-/* ---------------- REVEAL HOOK ---------------- */
-function useReveal() {
-  useEffect(() => {
-    const els = document.querySelectorAll("[data-reveal]");
-    if (!("IntersectionObserver" in window)) {
-      els.forEach((el) => el.classList.add(styles.revealed));
-      return;
-    }
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(styles.revealed);
-            io.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
-    );
-    els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
-  }, []);
-}
-
-/* ---------------- ICONS ---------------- */
 function Arrow() {
   return (
     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true">
@@ -564,17 +283,18 @@ function Arrow() {
     </svg>
   );
 }
-function Check() {
-  return (
-    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true">
-      <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
 function Quote() {
   return (
     <svg viewBox="0 0 48 36" width="44" height="33" fill="currentColor" aria-hidden="true">
       <path d="M0 36V20C0 9 7 1 19 0l2 6C13 8 9 12 9 18h8v18H0Zm27 0V20C27 9 34 1 46 0l2 6c-8 2-12 6-12 12h8v18H27Z" />
+    </svg>
+  );
+}
+function Lock() {
+  return (
+    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" aria-hidden="true">
+      <rect x="4" y="10" width="16" height="11" rx="2" stroke="currentColor" strokeWidth="1.6" />
+      <path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" strokeWidth="1.6" />
     </svg>
   );
 }
