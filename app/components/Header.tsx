@@ -6,10 +6,11 @@ import { useEffect, useState } from "react";
 import styles from "../ui.module.css";
 
 const LINKS: [string, string][] = [
+  ["Join Us", "/donate"],
+  ["What We Do", "/#ways"],
   ["Who We Are", "/about"],
-  ["What We Do", "/#programs"],
   ["Where We Work", "/where-we-work"],
-  ["Stories", "/#stories"],
+  ["Latest", "/#latest"],
 ];
 
 export default function Header() {
@@ -18,7 +19,7 @@ export default function Header() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10);
+    const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -30,37 +31,18 @@ export default function Header() {
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ""}`}>
-      <div className={styles.topbarWrap}>
-        <div className={styles.topbar}>
-          <span>Speaking God&rsquo;s love to every heart, home &amp; nation</span>
-          <Link href="/donate">Give monthly &rsaquo;</Link>
-        </div>
-      </div>
-
       <div className={styles.navInner}>
-        <Link href="/" className={styles.brand} aria-label="The Voice of Love — home">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
+        <Link href="/" className={styles.brand} aria-label="The Voice of Love home">
           <img src="/images/logo.png" alt="" className={styles.brandLogo} />
-          <span className={styles.brandText}>
-            Voice of Love<em>Family</em>
-          </span>
+          <span className={styles.brandText}>Voice of Love</span>
         </Link>
 
         <nav className={`${styles.nav} ${open ? styles.navOpen : ""}`}>
-          {LINKS.map(([label, href]) => {
-            const active = href.startsWith("/#")
-              ? false
-              : pathname === href;
-            return (
-              <Link
-                key={href}
-                href={href}
-                className={active ? styles.navActive : ""}
-              >
-                {label}
-              </Link>
-            );
-          })}
+          {LINKS.map(([label, href]) => (
+            <Link key={href} href={href} className={pathname === href ? styles.navActive : ""}>
+              {label}
+            </Link>
+          ))}
           <Link href="/donate" className={styles.donateBtn}>
             <HeartIcon /> Donate
           </Link>
@@ -70,7 +52,7 @@ export default function Header() {
           className={styles.burger}
           aria-label="Menu"
           aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
+          onClick={() => setOpen((value) => !value)}
         >
           <span data-open={open} />
         </button>

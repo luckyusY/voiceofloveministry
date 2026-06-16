@@ -3,30 +3,29 @@ import styles from "../ui.module.css";
 
 const COLS: [string, [string, string][]][] = [
   [
-    "What We Do",
+    "Join Us",
     [
-      ["Word & Worship", "/#programs"],
-      ["Family of Faith", "/#programs"],
-      ["Forgiveness & Truth", "/#programs"],
-      ["Compassion in Action", "/#programs"],
-    ],
-  ],
-  [
-    "Where We Work",
-    [
-      ["United States (HQ)", "/where-we-work"],
-      ["Uganda", "/where-we-work"],
-      ["Rwanda", "/where-we-work"],
-      ["Kenya", "/where-we-work"],
-    ],
-  ],
-  [
-    "Get Involved",
-    [
-      ["Donate", "/donate"],
-      ["Give Monthly", "/donate"],
-      ["Our Story", "/about"],
+      ["Donate Now", "/donate"],
+      ["Donate Monthly", "/donate"],
       ["Pray With Us", "/about"],
+      ["Volunteer", "/about"],
+    ],
+  ],
+  [
+    "Explore",
+    [
+      ["Who We Are", "/about"],
+      ["What We Do", "/#ways"],
+      ["Where We Work", "/where-we-work"],
+      ["Latest News", "/#latest"],
+    ],
+  ],
+  [
+    "Follow Us",
+    [
+      ["Facebook", "#"],
+      ["Instagram", "#"],
+      ["YouTube", "#"],
     ],
   ],
 ];
@@ -38,27 +37,15 @@ export default function Footer() {
         <div className={styles.footerTop}>
           <div className={styles.footerBrand}>
             <Link href="/" className={styles.brand}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/images/logo.png" alt="" className={styles.brandLogo} />
-              <span className={styles.brandText}>
-                Voice of Love<em>Family</em>
-              </span>
+              <span className={styles.brandText}>Voice of Love</span>
             </Link>
-            <p>
-              A generation chosen to speak God&rsquo;s love, bring hope to the
-              hopeless, and unite the world through the power of love.
-            </p>
-            <div className={styles.socials}>
-              <a href="#" aria-label="Facebook">Facebook</a>
-              <a href="#" aria-label="Instagram">Instagram</a>
-              <a href="#" aria-label="YouTube">YouTube</a>
-            </div>
           </div>
           {COLS.map(([head, items]) => (
             <div className={styles.footerCol} key={head}>
               <h4>{head}</h4>
-              {items.map(([label, href], i) => (
-                <Link href={href} key={label + i}>
+              {items.map(([label, href]) => (
+                <Link href={href} key={label}>
                   {label}
                 </Link>
               ))}
@@ -66,9 +53,15 @@ export default function Footer() {
           ))}
         </div>
         <div className={styles.footerBottom}>
-          <span>© {new Date().getFullYear()} The Voice of Love Family. All rights reserved.</span>
-          <span>Speaking love to every heart, home, and nation.</span>
+          <span>© {new Date().getFullYear()} The Voice of Love Family</span>
+          <span>Privacy Policy</span>
+          <span>Cookie Policy</span>
+          <span>Contact Us</span>
         </div>
+        <p className={styles.legalCopy}>
+          The Voice of Love Family is a community ministry carrying hope through
+          worship, prayer, outreach, and practical care. All rights reserved.
+        </p>
       </div>
     </footer>
   );
