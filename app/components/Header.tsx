@@ -6,10 +6,10 @@ import { useEffect, useState } from "react";
 import styles from "../ui.module.css";
 
 const LINKS: [string, string][] = [
+  ["What We Do", "/what-we-do"],
   ["Who We Are", "/about"],
-  ["What We Do", "/#programs"],
   ["Where We Work", "/where-we-work"],
-  ["Stories", "/#stories"],
+  ["Contact", "/contact"],
 ];
 
 export default function Header() {

@@ -6,9 +6,9 @@ import NewsletterForm from "./components/NewsletterForm";
 import s from "./ui.module.css";
 
 const PROGRAMS = [
+  { tag: "Children & Youth", title: "Walking with children and young people", text: "We pour love into children and youth through teaching, mentorship, music, and tender care.", img: "/images/youth.jpg" },
   { tag: "Word & Worship", title: "Love through words, actions & music", text: "We carry the message of love through preaching, song, and everyday kindness.", img: "/images/band.jpg" },
-  { tag: "Family of Faith", title: "A family that prays for one another", text: "A community where every person is welcomed, encouraged, and held in prayer.", img: "/images/youth.jpg" },
-  { tag: "Forgiveness & Truth", title: "Living in forgiveness & truth", text: "We help hearts heal and grow through God's Word, mercy, and honest living.", img: "/images/preaching.jpg" },
+  { tag: "Family of Faith", title: "A family that prays for one another", text: "A community where every child and family is welcomed, encouraged, and held in prayer.", img: "/images/congregation.jpg" },
   { tag: "Compassion in Action", title: "Serving with compassion & unity", text: "Standing with the vulnerable — bringing practical help where it's needed most.", img: "/images/outreach-women.jpg" },
 ];
 
@@ -19,16 +19,17 @@ const COUNTRIES = [
   { name: "Kenya", role: "Outreach", img: "/images/field.jpg" },
 ];
 
+// NOTE: figures are placeholders — replace with Voice of Love's real numbers.
 const STATS = [
-  { n: "10K+", label: "Hearts reached with the message of love" },
+  { n: "1,000+", label: "Children & young people encouraged" },
   { n: "4", label: "Nations across two continents" },
   { n: "25+", label: "Communities served together" },
   { n: "100%", label: "Driven by faith, hope & love" },
 ];
 
 const STORIES = [
+  { cat: "Children", date: "Outreach", title: "Bringing teaching, song, and hope to children in East Africa", img: "/images/children.jpg" },
   { cat: "Testimony", date: "Recent", title: "“Love gave me a family when I had none.”", img: "/images/congregation.jpg" },
-  { cat: "Our Team", date: "On the ground", title: "The people carrying the vision across nations", img: "/images/leaders.jpg" },
   { cat: "Worship", date: "Ongoing", title: "How music is carrying God's love across nations", img: "/images/worship-raise.jpg" },
 ];
 
@@ -47,9 +48,9 @@ export default function Home() {
                 every nation.
               </h1>
               <p className={s.heroText}>
-                Love is the greatest voice that can heal hearts, restore hope, and
-                unite people across all nations. Stand with us as we live, speak,
-                and share this love — from the United States to East Africa.
+                Love is the greatest voice that can heal hearts and restore hope.
+                We stand with children, families, and communities — sharing
+                God&rsquo;s love from the United States to East Africa.
               </p>
               <div className={s.heroCtas}>
                 <Link href="/donate" className={s.btnPrimary}>
@@ -113,6 +114,40 @@ export default function Home() {
           </div>
         </section>
 
+        {/* CHILDREN MISSION */}
+        <section className={s.section} style={{ paddingTop: 0 }}>
+          <div className={s.container}>
+            <div className={s.split}>
+              <Reveal>
+                <span className={s.kicker}>Our heart for children</span>
+                <h2 className={s.h2}>
+                  Every child deserves to know they are{" "}
+                  <em className={s.italicAccent}>loved.</em>
+                </h2>
+                <p className={s.lead}>
+                  Children and young people are at the heart of our mission. Across
+                  Uganda, Rwanda, and Kenya we walk with them through teaching,
+                  mentorship, worship, and practical care — helping them grow up
+                  knowing they are seen, valued, and loved by God.
+                </p>
+                <p className={s.lead}>
+                  Your gift helps provide encouragement, song, and support to a
+                  child today.
+                </p>
+                <p style={{ marginTop: "1.6rem" }}>
+                  <Link href="/donate" className={s.btnPrimary}>
+                    Help a child <Arrow />
+                  </Link>
+                </p>
+              </Reveal>
+              <Reveal className={s.splitMedia} delay={100}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/children.jpg" alt="Children at a Voice of Love gathering" loading="lazy" />
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
         {/* GIVE TEASER */}
         <section className={s.give}>
           <div className={s.container}>
@@ -124,8 +159,8 @@ export default function Home() {
                 </h2>
                 <p className={s.lead}>
                   We depend on people who believe love can change the world. Every
-                  gift supports worship, families of faith, and compassionate relief
-                  across two continents.
+                  gift supports children and families, worship, and compassionate
+                  relief across two continents.
                 </p>
                 <div className={s.heroCtas}>
                   <Link href="/donate" className={s.btnPrimary}>

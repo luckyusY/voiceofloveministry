@@ -5,10 +5,10 @@ const COLS: [string, [string, string][]][] = [
   [
     "What We Do",
     [
-      ["Word & Worship", "/#programs"],
-      ["Family of Faith", "/#programs"],
-      ["Forgiveness & Truth", "/#programs"],
-      ["Compassion in Action", "/#programs"],
+      ["Children & Youth", "/what-we-do"],
+      ["Word & Worship", "/what-we-do"],
+      ["Family of Faith", "/what-we-do"],
+      ["Compassion in Action", "/what-we-do"],
     ],
   ],
   [
@@ -26,7 +26,7 @@ const COLS: [string, [string, string][]][] = [
       ["Donate", "/donate"],
       ["Give Monthly", "/donate"],
       ["Our Story", "/about"],
-      ["Pray With Us", "/about"],
+      ["Contact Us", "/contact"],
     ],
   ],
 ];

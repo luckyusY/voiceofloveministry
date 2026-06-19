@@ -289,6 +289,16 @@
 .faqOpen .faqA { max-height: 320px; }
 .faqA p { padding-bottom: 1.3rem; color: var(--ink-soft); font-size: .98rem; line-height: 1.7; }
 
+/* ---------- CONTACT ---------- */
+.contactList { display: grid; gap: 1.1rem; margin-top: 1.6rem; }
+.contactList p { font-size: .98rem; color: var(--ink-soft); line-height: 1.5; }
+.contactList strong { font-family: var(--font-display); font-weight: 600; color: var(--slate); font-size: 1.05rem; }
+.contactForm { display: grid; gap: 1.1rem; }
+.contactForm label { display: grid; gap: .4rem; }
+.contactForm label span { font-family: var(--font-body); font-size: .8rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-mute); }
+.contactForm input, .contactForm textarea { font-family: var(--font-body); font-size: 1rem; padding: .85rem 1rem; border: 1px solid var(--line); border-radius: 2px; background: var(--bg-warm); color: var(--ink); resize: vertical; }
+.contactForm input:focus, .contactForm textarea:focus { outline: none; border-color: var(--red); }
+
 /* ---------- REVEAL (subtle) ---------- */
 .reveal { opacity: 0; transform: translateY(14px); transition: opacity .7s ease, transform .7s ease; }
 .revealed { opacity: 1; transform: none; }
