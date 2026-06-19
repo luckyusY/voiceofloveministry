@@ -39,9 +39,6 @@ export default function Home() {
       <main>
         {/* HERO */}
         <section className={s.hero}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/hero-worship.jpg" alt="" className={s.heroImg} />
-          <div className={s.heroOverlay} />
           <div className={s.container}>
             <div className={s.heroContent}>
               <span className={s.flag}>A community built on God&rsquo;s love</span>
@@ -58,11 +55,15 @@ export default function Home() {
                 <Link href="/donate" className={s.btnPrimary}>
                   Donate now <Arrow />
                 </Link>
-                <Link href="/about" className={s.btnOutlineLight}>
+                <Link href="/about" className={s.btnOutline}>
                   Discover our story
                 </Link>
               </div>
             </div>
+          </div>
+          <div className={s.heroFrame}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/hero-worship.jpg" alt="Voice of Love worship gathering" />
           </div>
         </section>
 

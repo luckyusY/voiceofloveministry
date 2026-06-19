@@ -6,17 +6,19 @@
   --blue-dark: #004a85;
   --teal: #178a8a;         /* logo teal figure */
   --teal-dark: #0f6d6d;
-  --ink: #1a1a1a;          /* near-black text */
-  --ink-soft: #4a4a4a;
-  --ink-mute: #6b6b6b;
-  --bg: #ffffff;
-  --bg-alt: #f4f6f8;       /* light section band */
-  --bg-warm: #fdf0f5;      /* soft pink tint band */
-  --line: #e4e7ea;
+  --ink: #2b2926;          /* warm charcoal body text */
+  --ink-soft: #564f47;
+  --ink-mute: #837a6d;
+  --bg: #f8f3e9;           /* warm cream canvas */
+  --bg-alt: #f1ead9;       /* deeper cream section band */
+  --bg-warm: #fbf5ea;      /* soft cream card tint */
+  --cream-card: #fffdf8;   /* card surface */
+  --line: #e2d8c4;         /* warm hairline */
   --slate: #06314f;        /* deep navy footer / contrast band (logo navy) */
   --slate-soft: #0d4a6e;
 
-  --gold: #15a0a0;         /* highlight accent (teal) */
+  --gold: #b08a3e;         /* antique gold accent (classic) */
+  --gold-soft: #cda85c;
 
   --maxw: 1220px;
 

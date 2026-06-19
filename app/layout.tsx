@@ -1,19 +1,21 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Hanken_Grotesk } from "next/font/google";
+import { Playfair_Display, Lora } from "next/font/google";
 import "./globals.css";
 
-const display = Fraunces({
+const display = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
-  axes: ["opsz", "SOFT", "WONK"],
+  weight: ["500", "600", "700", "800"],
+  style: ["normal", "italic"],
 });
 
-const body = Hanken_Grotesk({
+const body = Lora({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
