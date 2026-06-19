@@ -6,7 +6,7 @@ import NewsletterForm from "./components/NewsletterForm";
 import s from "./ui.module.css";
 
 const PROGRAMS = [
-  { tag: "Children & Youth", title: "Walking with children and young people", text: "We pour love into children and youth through teaching, mentorship, music, and tender care.", img: "/images/youth.jpg" },
+  { tag: "Children & Youth", title: "Walking with children and young people", text: "We pour love into children and youth through teaching, mentorship, music, and tender care.", img: "/images/children-gathering.jpg" },
   { tag: "Word & Worship", title: "Love through words, actions & music", text: "We carry the message of love through preaching, song, and everyday kindness.", img: "/images/band.jpg" },
   { tag: "Family of Faith", title: "A family that prays for one another", text: "A community where every child and family is welcomed, encouraged, and held in prayer.", img: "/images/congregation.jpg" },
   { tag: "Compassion in Action", title: "Serving with compassion & unity", text: "Standing with the vulnerable — bringing practical help where it's needed most.", img: "/images/outreach-women.jpg" },
@@ -28,7 +28,7 @@ const STATS = [
 ];
 
 const STORIES = [
-  { cat: "Children", date: "Outreach", title: "Bringing teaching, song, and hope to children in East Africa", img: "/images/children.jpg" },
+  { cat: "Children", date: "Outreach", title: "Bringing teaching, song, and hope to children in East Africa", img: "/images/children-outreach.jpg" },
   { cat: "Testimony", date: "Recent", title: "“Love gave me a family when I had none.”", img: "/images/congregation.jpg" },
   { cat: "Worship", date: "Ongoing", title: "How music is carrying God's love across nations", img: "/images/worship-raise.jpg" },
 ];
@@ -142,7 +142,7 @@ export default function Home() {
               </Reveal>
               <Reveal className={s.splitMedia} delay={100}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/children.jpg" alt="Children at a Voice of Love gathering" loading="lazy" />
+                <img src="/images/children-group.jpg" alt="Children supported by Voice of Love Ministry" loading="lazy" />
               </Reveal>
             </div>
           </div>
