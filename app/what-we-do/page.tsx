@@ -8,33 +8,54 @@ import s from "../ui.module.css";
 export const metadata: Metadata = {
   title: "What We Do",
   description:
-    "Caring for children and young people, worship and the Word, families of faith, and compassionate outreach across the United States and East Africa.",
+    "See how Voice of Love Ministry walks with children through care, teaching, worship, mentorship, and compassionate outreach across East Africa.",
 };
 
 const PROGRAMS = [
   {
-    tag: "Children & Youth",
-    title: "Caring for children and young people",
-    text: "Children are at the heart of our mission. We walk with them through teaching, mentorship, music, and practical care — helping them grow up knowing they are seen, valued, and deeply loved by God.",
-    img: "/images/youth.jpg",
+    tag: "Care & Mentorship",
+    title: "Walking beside every child",
+    text: "We listen, encourage, and build trusted relationships that help children grow with confidence, dignity, and hope.",
+    img: "/images/children-community.jpg",
   },
   {
-    tag: "Word & Worship",
-    title: "Sharing love through the Word and music",
-    text: "Through preaching, song, and prayer we lift up God's name and invite every heart — young and old — into His love.",
+    tag: "Teaching & Faith",
+    title: "Helping faith take root",
+    text: "Through age-appropriate teaching, prayer, and conversation, children discover that they are known and loved by God.",
+    img: "/images/children-gathering.jpg",
+  },
+  {
+    tag: "Music & Worship",
+    title: "Giving young voices room to rise",
+    text: "Song and worship bring children together, nurture their gifts, and give them joyful ways to express their faith.",
     img: "/images/band.jpg",
   },
   {
-    tag: "Family of Faith",
-    title: "Building a family that prays together",
-    text: "A community where every child and family is welcomed, encouraged, and held up in prayer, season after season.",
-    img: "/images/congregation.jpg",
+    tag: "Practical Support",
+    title: "Meeting needs with compassion",
+    text: "We stand with vulnerable children and families through practical care, encouragement, and a dependable ministry presence.",
+    img: "/images/children-circle.jpg",
+  },
+];
+
+const MOMENTS = [
+  {
+    src: "/images/children-outreach.jpg",
+    alt: "Voice of Love Ministry meeting children at a community outreach",
+    caption: "Showing up with love",
+    className: s.storyPhotoWide,
   },
   {
-    tag: "Compassion in Action",
-    title: "Standing with those in need",
-    text: "We bring practical help — encouragement, provision, and presence — to vulnerable children and families across East Africa.",
-    img: "/images/outreach-women.jpg",
+    src: "/images/children-community.jpg",
+    alt: "Children gathered together during a Voice of Love Ministry visit",
+    caption: "Gathering as one community",
+    className: "",
+  },
+  {
+    src: "/images/children-circle.jpg",
+    alt: "Children listening during an outreach gathering",
+    caption: "Listening, learning, and growing",
+    className: "",
   },
 ];
 
@@ -42,109 +63,103 @@ export default function WhatWeDoPage() {
   return (
     <>
       <Header />
-
-      <section className={s.pageHeader}>
-        <div className={s.container}>
-          <div className={s.pageHeaderInner}>
-            <div className={s.crumb}>
-              <Link href="/">Home</Link> <span>/</span> <span>What We Do</span>
-            </div>
-            <span className={s.kicker}>What we do</span>
-            <h1 className={s.pageTitle}>
-              Sharing God&rsquo;s love with{" "}
-              <em className={s.italicAccent}>children</em> and communities.
-            </h1>
-            <p className={s.pageLede}>
-              From caring for children and young people to worship, family, and
-              compassionate outreach — everything we do flows from one belief:
-              love is the greatest voice of all.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <main>
-        {/* CHILDREN FOCUS */}
-        <section className={s.section}>
+        <section className={s.workHero}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/children-group.jpg" alt="Children supported by Voice of Love Ministry" className={s.workHeroImage} />
+          <div className={s.workHeroVeil} />
+          <div className={`${s.container} ${s.workHeroInner}`}>
+            <div className={s.workHeroContent}>
+              <div className={s.crumb}>
+                <Link href="/">Home</Link> <span>/</span> <span>What We Do</span>
+              </div>
+              <span className={s.kicker}>Our heart in action</span>
+              <h1 className={s.workHeroTitle}>We help children know they are seen, valued, and loved.</h1>
+              <p>
+                Through care, teaching, mentorship, worship, and practical support,
+                we walk beside children and their communities across East Africa.
+              </p>
+              <Link href="/donate" className={s.btnPrimary}>Help a child today</Link>
+            </div>
+          </div>
+        </section>
+
+        <section className={s.workIntro}>
           <div className={s.container}>
-            <div className={s.split}>
-              <Reveal className={s.splitMedia}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/children.jpg" alt="Children at a Voice of Love gathering" loading="lazy" />
-              </Reveal>
-              <Reveal delay={100}>
-                <span className={s.kicker}>Our heart for children</span>
+            <div className={s.workIntroGrid}>
+              <Reveal className={s.workIntroCopy}>
+                <span className={s.kicker}>Children are our mission</span>
                 <h2 className={s.h2}>
-                  Every child deserves to know they are{" "}
-                  <em className={s.italicAccent}>loved.</em>
+                  Love becomes real when a child can{" "}
+                  <em className={s.italicAccent}>feel it.</em>
                 </h2>
                 <p className={s.lead}>
-                  Caring for children and young people is the centre of our
-                  mission. We teach, mentor, sing with, and stand beside them —
-                  helping each child grow in faith, hope, and dignity.
+                  We do more than visit. We build relationships with children,
+                  listen to their stories, share God&rsquo;s Word, sing together,
+                  and keep showing up with care.
                 </p>
                 <p className={s.lead}>
-                  Across Uganda, Rwanda, and Kenya, your support helps us bring
-                  encouragement and practical care to children who need it most.
+                  Each gathering is a chance for a child to be encouraged, to
+                  belong, and to imagine a future shaped by faith and hope.
                 </p>
-                <p style={{ marginTop: "1.6rem" }}>
-                  <Link href="/donate" className={s.btnPrimary}>
-                    Help a child today
-                  </Link>
-                </p>
+                <div className={s.workValues} aria-label="Our approach">
+                  <span>Faith</span><span>Dignity</span><span>Belonging</span><span>Hope</span>
+                </div>
+              </Reveal>
+              <Reveal className={s.workIntroMedia} delay={100}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/children-gathering.jpg" alt="Children gathered for teaching and encouragement" loading="lazy" />
+                <p>Every gathering begins by meeting children where they are.</p>
               </Reveal>
             </div>
           </div>
         </section>
 
-        {/* CHILDREN GALLERY */}
-        <section className={s.section} style={{ paddingTop: 0 }}>
+        <section className={s.workStories}>
           <div className={s.container}>
-            <Reveal className={`${s.head} ${s.center}`} style={{ margin: "0 auto 2.4rem" }}>
-              <span className={`${s.kicker} ${s.kickerCenter}`}>On the ground</span>
-              <h2 className={s.h2}>Reaching children across East Africa</h2>
-              <p className={`${s.lead} ${s.center}`}>
-                Gathering children and young people for teaching, song, and
-                encouragement in Uganda, Rwanda, and Kenya.
+            <Reveal className={s.workSectionHead}>
+              <div>
+                <span className={s.kicker}>From the field</span>
+                <h2 className={s.h2}>Love, present in every moment</h2>
+              </div>
+              <p>
+                These are the children and communities we have the privilege of
+                serving. Their faces are the reason this work matters.
               </p>
             </Reveal>
-            <div className={s.gallery}>
-              {[
-                ["/images/children-outreach-1.jpg", "Children gathered at a community outreach"],
-                ["/images/children-outreach-2.jpg", "Young people at a Voice of Love gathering"],
-                ["/images/children-outreach-3.jpg", "Sharing hope with children in East Africa"],
-              ].map(([src, cap], i) => (
-                <Reveal as="figure" className={s.galleryItem} key={src} delay={i * 70}>
+            <div className={s.storyPhotos}>
+              {MOMENTS.map((moment, index) => (
+                <Reveal as="figure" className={`${s.storyPhoto} ${moment.className}`} key={moment.src} delay={index * 70}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={src} alt={cap} loading="lazy" />
-                  <figcaption className={s.galleryCap}>{cap}</figcaption>
+                  <img src={moment.src} alt={moment.alt} loading="lazy" />
+                  <figcaption>{moment.caption}</figcaption>
                 </Reveal>
               ))}
             </div>
           </div>
         </section>
 
-        {/* PROGRAMS */}
-        <section className={s.section} style={{ background: "var(--bg-alt)" }}>
+        <section className={s.workPrograms}>
           <div className={s.container}>
             <Reveal className={`${s.head} ${s.center}`} style={{ margin: "0 auto 2.8rem" }}>
-              <span className={`${s.kicker} ${s.kickerCenter}`}>Our work</span>
-              <h2 className={s.h2}>Four ways we share love</h2>
+              <span className={`${s.kicker} ${s.kickerCenter}`}>How we serve</span>
+              <h2 className={s.h2}>Care for the whole child</h2>
+              <p className={`${s.lead} ${s.center}`}>
+                Our work nurtures faith, confidence, creativity, and practical
+                wellbeing so children can grow in every part of life.
+              </p>
             </Reveal>
-            <div className={s.grid4}>
-              {PROGRAMS.map((p, i) => (
-                <Reveal as="article" className={s.card} key={p.tag} delay={i * 70}>
-                  <div className={s.cardMedia}>
+            <div className={s.workProgramGrid}>
+              {PROGRAMS.map((program, index) => (
+                <Reveal as="article" className={s.workProgram} key={program.tag} delay={index * 70}>
+                  <div className={s.workProgramMedia}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={p.img} alt={p.tag} loading="lazy" />
+                    <img src={program.img} alt="" loading="lazy" />
                   </div>
-                  <div className={s.cardBody}>
-                    <span className={s.cardTag}>{p.tag}</span>
-                    <h3 className={s.h3}>{p.title}</h3>
-                    <p>{p.text}</p>
-                    <Link href="/donate" className={s.textLink}>
-                      Support this
-                    </Link>
+                  <div className={s.workProgramBody}>
+                    <span className={s.cardTag}>{program.tag}</span>
+                    <h3 className={s.h3}>{program.title}</h3>
+                    <p>{program.text}</p>
                   </div>
                 </Reveal>
               ))}
@@ -152,24 +167,23 @@ export default function WhatWeDoPage() {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className={s.declaration} style={{ background: "var(--slate)" }}>
+        <section className={s.workCta}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/children-community.jpg" alt="" className={s.workCtaImage} />
+          <div className={s.workCtaVeil} />
           <div className={s.container}>
-            <Reveal as="figure">
-              <blockquote>
-                When we love a child, we let God&rsquo;s voice be heard — and a
-                whole future begins to change.
-              </blockquote>
-              <figcaption>
-                <Link href="/donate" className={s.btnPrimary} style={{ marginTop: "1.5rem" }}>
-                  Donate now
-                </Link>
-              </figcaption>
+            <Reveal className={s.workCtaContent}>
+              <span className={s.kicker}>Stand with a child</span>
+              <h2>Help us keep showing up with love.</h2>
+              <p>
+                Your generosity helps create more moments of care, teaching,
+                worship, and hope for children who need them.
+              </p>
+              <Link href="/donate" className={s.btnPrimary}>Give today</Link>
             </Reveal>
           </div>
         </section>
       </main>
-
       <Footer />
     </>
   );
