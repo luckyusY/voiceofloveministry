@@ -299,6 +299,31 @@
 .contactForm input, .contactForm textarea { font-family: var(--font-body); font-size: 1rem; padding: .85rem 1rem; border: 1px solid var(--line); border-radius: 2px; background: var(--bg-warm); color: var(--ink); resize: vertical; }
 .contactForm input:focus, .contactForm textarea:focus { outline: none; border-color: var(--red); }
 
+/* ---------- DONATE POPUP ---------- */
+.popup {
+  position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 80;
+  width: min(340px, calc(100vw - 2rem));
+  background: var(--cream-card); border: 1px solid var(--line); border-top: 3px solid var(--red);
+  border-radius: 4px; padding: 1.5rem 1.4rem 1.4rem;
+  box-shadow: 0 28px 60px -24px rgba(6,49,79,.45);
+  animation: popupIn .45s cubic-bezier(.22,1,.36,1) both;
+}
+.popup .kicker { margin-bottom: .6rem; }
+.popup .h3 { margin-bottom: .4rem; }
+.popupText { font-size: .92rem; color: var(--ink-soft); line-height: 1.55; }
+.popup .quickAmounts { margin: 1rem 0; }
+.popupClose {
+  position: absolute; top: .5rem; right: .6rem; width: 30px; height: 30px;
+  border: none; background: none; cursor: pointer; font-size: 1.4rem; line-height: 1;
+  color: var(--ink-mute); border-radius: 50%; transition: background .15s, color .15s;
+}
+.popupClose:hover { background: var(--bg-alt); color: var(--slate); }
+@keyframes popupIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+@media (max-width: 460px) {
+  .popup { right: 1rem; left: 1rem; bottom: 1rem; width: auto; }
+}
+@media (prefers-reduced-motion: reduce) { .popup { animation: none; } }
+
 /* ---------- REVEAL (subtle) ---------- */
 .reveal { opacity: 0; transform: translateY(14px); transition: opacity .7s ease, transform .7s ease; }
 .revealed { opacity: 1; transform: none; }

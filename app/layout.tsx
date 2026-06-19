@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Lora } from "next/font/google";
+import DonatePopup from "./components/DonatePopup";
 import "./globals.css";
 
 const display = Playfair_Display({
@@ -56,7 +57,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${display.variable} ${body.variable}`}>{children}</body>
+      <body className={`${display.variable} ${body.variable}`}>
+        {children}
+        <DonatePopup />
+      </body>
     </html>
   );
 }
