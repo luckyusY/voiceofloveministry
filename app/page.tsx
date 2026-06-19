@@ -64,7 +64,7 @@ export default function Home() {
           </div>
           <div className={s.heroFrame}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/hero-worship.jpg" alt="Voice of Love worship gathering" />
+            <img src="/images/hero-worship.jpg" alt="The Voice of Love Ministry worship gathering" />
           </div>
         </section>
 
@@ -142,7 +142,7 @@ export default function Home() {
               </Reveal>
               <Reveal className={s.splitMedia} delay={100}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/children-group.jpg" alt="Children supported by Voice of Love Ministry" loading="lazy" />
+                <img src="/images/children-group.jpg" alt="Children supported by The Voice of Love Ministry" loading="lazy" />
               </Reveal>
             </div>
           </div>
@@ -175,7 +175,7 @@ export default function Home() {
                 <span className={s.cardTag}>Make a difference</span>
                 <h3 className={s.h3}>Choose an amount to begin</h3>
                 <div className={s.quickAmounts}>
-                  <Link href="/donate">$25</Link>
+                  <Link href="/donate">$20</Link>
                   <Link href="/donate">$50</Link>
                   <Link href="/donate">$100</Link>
                 </div>
@@ -285,7 +285,7 @@ export default function Home() {
             <Reveal as="figure">
               <Quote />
               <blockquote>
-                We are the Voice of Love Family — a generation chosen to speak
+                We are The Voice of Love Ministry — a generation chosen to speak
                 God&rsquo;s love, to bring hope to the hopeless, and to unite the
                 world through the power of love.
               </blockquote>

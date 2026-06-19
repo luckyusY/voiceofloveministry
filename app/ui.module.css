@@ -430,6 +430,11 @@
   .amountGrid { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 480px) {
+  .navInner { gap: .5rem; padding-left: 1rem; padding-right: 1rem; }
+  .brand { gap: .5rem; }
+  .brandLogo { width: 42px; height: 42px; }
+  .brandText { font-size: 1.05rem; }
+  .brandText em { font-size: .55rem; letter-spacing: .24em; }
   .impactGrid { grid-template-columns: 1fr; }
   .stat::after { display: none !important; }
   .footerTop { grid-template-columns: 1fr; }

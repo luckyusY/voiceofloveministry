@@ -7,10 +7,10 @@ import Footer from "../components/Footer";
 import Reveal from "../components/Reveal";
 import s from "../ui.module.css";
 
-const AMOUNTS = [25, 50, 100, 250, 500];
+const AMOUNTS = [20, 50, 100, 250, 500];
 
 const IMPACT: Record<number, string> = {
-  25: "helps provide worship materials and encouragement to a family of faith.",
+  20: "helps provide worship materials and encouragement to a family of faith.",
   50: "supports outreach and practical relief in a community for a week.",
   100: "helps carry the message of love through music and ministry events.",
   250: "sponsors compassionate relief for families in need across East Africa.",
@@ -27,7 +27,7 @@ const DESIGNATIONS = [
 const FAQS = [
   {
     q: "Is my donation secure?",
-    a: "Yes. Payments are processed by industry-leading providers (Stripe and PayPal) using bank-level encryption. The Voice of Love Family never sees or stores your card details.",
+    a: "Yes. Payments are processed by industry-leading providers (Stripe and PayPal) using bank-level encryption. The Voice of Love Ministry never sees or stores your card details.",
   },
   {
     q: "Can I give monthly?",

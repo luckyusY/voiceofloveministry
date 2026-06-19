@@ -41,7 +41,7 @@ export default function Footer() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/images/logo.png" alt="" className={styles.brandLogo} />
               <span className={styles.brandText}>
-                Voice of Love<em>Ministry</em>
+                The Voice of Love<em>Ministry</em>
               </span>
             </Link>
             <p>
@@ -66,7 +66,7 @@ export default function Footer() {
           ))}
         </div>
         <div className={styles.footerBottom}>
-          <span>© {new Date().getFullYear()} The Voice of Love Family. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} The Voice of Love Ministry. All rights reserved.</span>
           <span>Speaking love to every heart, home, and nation.</span>
         </div>
       </div>

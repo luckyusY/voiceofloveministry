@@ -8,7 +8,7 @@ import s from "../ui.module.css";
 export const metadata: Metadata = {
   title: "Who We Are",
   description:
-    "The Voice of Love Family is a community built on the message of God's love — our story, vision, mission, and values.",
+    "The Voice of Love Ministry is a community built on the message of God's love — our story, vision, mission, and values.",
 };
 
 const MISSION = [
@@ -42,7 +42,7 @@ export default function AboutPage() {
               A family carrying the message of God&rsquo;s <em className={s.italicAccent}>love.</em>
             </h1>
             <p className={s.pageLede}>
-              The Voice of Love Family is a community built on the belief that love
+              The Voice of Love Ministry is a community built on the belief that love
               is the greatest voice — one that can heal hearts, restore hope, and
               unite people across all nations.
             </p>
@@ -130,7 +130,7 @@ export default function AboutPage() {
           <div className={s.container}>
             <Reveal as="figure">
               <blockquote>
-                We are the Voice of Love Family — a generation chosen to speak
+                We are The Voice of Love Ministry — a generation chosen to speak
                 God&rsquo;s love, to bring hope to the hopeless, and to unite the
                 world through the power of love.
               </blockquote>

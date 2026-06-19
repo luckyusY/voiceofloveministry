@@ -8,7 +8,7 @@ import s from "../ui.module.css";
 export const metadata: Metadata = {
   title: "What We Do",
   description:
-    "See how Voice of Love Ministry walks with children through care, teaching, worship, mentorship, and compassionate outreach across East Africa.",
+    "See how The Voice of Love Ministry walks with children through care, teaching, worship, mentorship, and compassionate outreach across East Africa.",
 };
 
 const PROGRAMS = [
@@ -41,13 +41,13 @@ const PROGRAMS = [
 const MOMENTS = [
   {
     src: "/images/children-outreach.jpg",
-    alt: "Voice of Love Ministry meeting children at a community outreach",
+    alt: "The Voice of Love Ministry meeting children at a community outreach",
     caption: "Showing up with love",
     className: s.storyPhotoWide,
   },
   {
     src: "/images/children-community.jpg",
-    alt: "Children gathered together during a Voice of Love Ministry visit",
+    alt: "Children gathered during a visit from The Voice of Love Ministry",
     caption: "Gathering as one community",
     className: "",
   },
@@ -66,7 +66,7 @@ export default function WhatWeDoPage() {
       <main>
         <section className={s.workHero}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/children-group.jpg" alt="Children supported by Voice of Love Ministry" className={s.workHeroImage} />
+          <img src="/images/children-group.jpg" alt="Children supported by The Voice of Love Ministry" className={s.workHeroImage} />
           <div className={s.workHeroVeil} />
           <div className={`${s.container} ${s.workHeroInner}`}>
             <div className={s.workHeroContent}>

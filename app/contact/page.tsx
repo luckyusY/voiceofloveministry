@@ -9,7 +9,7 @@ import s from "../ui.module.css";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with The Voice of Love Family — for prayer, partnership, volunteering, or to learn more about our mission to children and communities.",
+    "Get in touch with The Voice of Love Ministry — for prayer, partnership, volunteering, or to learn more about our mission to children and communities.",
 };
 
 export default function ContactPage() {
