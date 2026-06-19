@@ -1,0 +1,23 @@
+
+> voice-of-love-ministry@0.1.0 dev
+> next dev --port 3000
+
+▲ Next.js 16.2.9 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.56.1:3000
+✓ Ready in 7.7s
+
+ GET / 200 in 2.7s (next.js: 932ms, application-code: 1767ms)
+✓ Compiled in 677ms
+ GET /what-we-do 200 in 1370ms (next.js: 437ms, application-code: 934ms)
+ GET /what-we-do 200 in 2.8s (next.js: 15ms, application-code: 2.8s)
+ GET /what-we-do 200 in 1995ms (next.js: 29ms, application-code: 1966ms)
+ GET /what-we-do 200 in 373ms (next.js: 9ms, application-code: 364ms)
+ GET /what-we-do 200 in 588ms (next.js: 39ms, application-code: 549ms)
+ GET /what-we-do 200 in 413ms (next.js: 39ms, application-code: 374ms)
+✓ Compiled in 1964ms
+✓ Compiled in 822ms
+ GET / 200 in 1603ms (next.js: 394ms, application-code: 1209ms)
+ GET /donate 200 in 739ms (next.js: 251ms, application-code: 488ms)
+ GET / 200 in 477ms (next.js: 11ms, application-code: 466ms)
+ GET /donate 200 in 344ms (next.js: 23ms, application-code: 320ms)

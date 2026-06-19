@@ -164,7 +164,7 @@
 .giveGrid { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
 .giveCard { background: var(--cream-card); border: 1px solid var(--line); border-radius: 4px; padding: clamp(1.6rem, 3vw, 2.4rem); box-shadow: 0 24px 50px -34px rgba(6,49,79,.4); }
 .quickAmounts { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6rem; margin: 1.2rem 0; }
-.quickAmounts a { text-align: center; font-family: var(--font-display); font-weight: 600; font-size: 1.2rem; padding: .85rem 0; border: 1px solid var(--line); border-radius: 2px; color: var(--slate); transition: border-color .18s, color .18s; }
+.quickAmounts a { text-align: center; font-family: var(--font-body); font-weight: 700; font-size: 1.15rem; padding: .85rem 0; border: 1px solid var(--line); border-radius: 2px; color: var(--slate); transition: border-color .18s, color .18s; }
 .quickAmounts a:hover { border-color: var(--red); color: var(--red); }
 
 /* ---------- NEWSLETTER ---------- */
@@ -222,13 +222,13 @@
 .recommend { position: absolute; top: -9px; right: 8px; background: var(--gold); color: #fff; font-family: var(--font-body); font-size: .58rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: .15rem .5rem; border-radius: 2px; }
 
 .amountGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .7rem; }
-.amountBtn { font-family: var(--font-display); font-weight: 600; font-size: 1.4rem; padding: 1.05rem 0; border: 1px solid var(--line); background: var(--cream-card); color: var(--slate); border-radius: 2px; cursor: pointer; transition: border-color .16s, color .16s, background .16s; }
+.amountBtn { font-family: var(--font-body); font-weight: 700; font-size: 1.3rem; padding: 1.05rem 0; border: 1px solid var(--line); background: var(--cream-card); color: var(--slate); border-radius: 2px; cursor: pointer; transition: border-color .16s, color .16s, background .16s; }
 .amountBtn:hover { border-color: var(--red); }
 .amountActive { border-color: var(--red) !important; color: var(--red) !important; background: var(--bg-warm) !important; }
 .customWrap { grid-column: 1 / -1; display: flex; align-items: center; gap: .6rem; border: 1px solid var(--line); border-radius: 2px; padding: 0 1rem; }
 .customWrap:focus-within { border-color: var(--red); }
-.customWrap span { font-family: var(--font-display); font-size: 1.3rem; color: var(--ink-mute); }
-.customWrap input { flex: 1; border: none; outline: none; font-family: var(--font-display); font-size: 1.3rem; padding: 1rem 0; color: var(--slate); background: transparent; }
+.customWrap span { font-family: var(--font-body); font-weight: 700; font-size: 1.2rem; color: var(--ink-mute); }
+.customWrap input { flex: 1; border: none; outline: none; font-family: var(--font-body); font-weight: 700; font-size: 1.2rem; padding: 1rem 0; color: var(--slate); background: transparent; }
 
 .designGrid { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
 .designBtn { text-align: left; font-family: var(--font-body); font-weight: 600; font-size: .95rem; padding: .9rem 1rem; border: 1px solid var(--line); background: var(--cream-card); color: var(--slate); border-radius: 2px; cursor: pointer; display: flex; align-items: center; gap: .6rem; transition: border-color .16s, background .16s; }
