@@ -30,6 +30,10 @@ next-env.d.ts
 # vercel
 .vercel
 
-# raw source media (large videos/originals) — optimized copies live in public/images
+# raw source media (originals) — optimized copies live in public/images
 /assers
 /assets
+/children
+
+# dev server logs
+.next-dev-*.log
