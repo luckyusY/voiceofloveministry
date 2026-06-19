@@ -97,6 +97,33 @@ export default function WhatWeDoPage() {
           </div>
         </section>
 
+        {/* CHILDREN GALLERY */}
+        <section className={s.section} style={{ paddingTop: 0 }}>
+          <div className={s.container}>
+            <Reveal className={`${s.head} ${s.center}`} style={{ margin: "0 auto 2.4rem" }}>
+              <span className={`${s.kicker} ${s.kickerCenter}`}>On the ground</span>
+              <h2 className={s.h2}>Reaching children across East Africa</h2>
+              <p className={`${s.lead} ${s.center}`}>
+                Gathering children and young people for teaching, song, and
+                encouragement in Uganda, Rwanda, and Kenya.
+              </p>
+            </Reveal>
+            <div className={s.gallery}>
+              {[
+                ["/images/children-outreach-1.jpg", "Children gathered at a community outreach"],
+                ["/images/children-outreach-2.jpg", "Young people at a Voice of Love gathering"],
+                ["/images/children-outreach-3.jpg", "Sharing hope with children in East Africa"],
+              ].map(([src, cap], i) => (
+                <Reveal as="figure" className={s.galleryItem} key={src} delay={i * 70}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={src} alt={cap} loading="lazy" />
+                  <figcaption className={s.galleryCap}>{cap}</figcaption>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* PROGRAMS */}
         <section className={s.section} style={{ background: "var(--bg-alt)" }}>
           <div className={s.container}>

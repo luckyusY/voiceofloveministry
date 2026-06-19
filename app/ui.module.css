@@ -289,6 +289,14 @@
 .faqOpen .faqA { max-height: 320px; }
 .faqA p { padding-bottom: 1.3rem; color: var(--ink-soft); font-size: .98rem; line-height: 1.7; }
 
+/* ---------- IMAGE GALLERY ---------- */
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.galleryItem { position: relative; overflow: hidden; border: 1px solid var(--line); border-radius: 4px; }
+.galleryItem img { width: 100%; height: 100%; aspect-ratio: 3 / 4; object-fit: cover; display: block; }
+.galleryCap { position: absolute; left: 0; right: 0; bottom: 0; padding: 1.4rem 1rem .9rem; color: #fff; font-family: var(--font-body); font-size: .82rem; font-weight: 600; letter-spacing: .04em; background: linear-gradient(0deg, rgba(6,49,79,.85), transparent); }
+@media (max-width: 720px) { .gallery { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 460px) { .gallery { grid-template-columns: 1fr; } }
+
 /* ---------- CONTACT ---------- */
 .contactList { display: grid; gap: 1.1rem; margin-top: 1.6rem; }
 .contactList p { font-size: .98rem; color: var(--ink-soft); line-height: 1.5; }
