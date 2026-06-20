@@ -20,10 +20,10 @@ const COUNTRIES = [
 ];
 
 const STATS = [
-  { n: "Children", label: "Known by name and welcomed" },
-  { n: "4", label: "Countries connected by one ministry" },
-  { n: "Faith", label: "Shared through teaching and worship" },
-  { n: "Care", label: "Given in practical, personal ways" },
+  { n: "Children", label: "Known by name, never a number" },
+  { n: "4", label: "Countries held together as one family" },
+  { n: "Faith", label: "Shared in word, song, and prayer" },
+  { n: "Care", label: "That shows up — and keeps coming back" },
 ];
 
 const STORIES = [
@@ -41,15 +41,15 @@ export default function Home() {
         <section className={s.hero}>
           <div className={s.container}>
             <div className={s.heroContent}>
-              <span className={s.flag}>Faith that is lived, not only spoken</span>
+              <span className={s.flag}>Faith you can see, not just hear</span>
               <h1 className={s.heroTitle}>
                 Let God&rsquo;s <em className={s.italicAccent}>love</em> be something
                 people can feel.
               </h1>
               <p className={s.heroText}>
-                We serve children and families through teaching, worship,
-                mentorship, prayer, and practical care in the United States and
-                East Africa.
+                We walk with children and families across the United States and
+                East Africa — teaching, worshipping, praying, and showing up with
+                real help when it&rsquo;s needed.
               </p>
               <div className={s.heroCtas}>
                 <Link href="/donate" className={s.btnPrimary}>
@@ -155,8 +155,8 @@ export default function Home() {
                   Help us be there, and keep <em className={s.italicAccent}>coming back.</em>
                 </h2>
                 <p className={s.lead}>
-                  Your support pays for children's gatherings, teaching,
-                  worship, outreach, and practical help for families.
+                  Your support keeps the gatherings going — the teaching, the
+                  worship, the visits, and the practical help families count on.
                 </p>
                 <div className={s.heroCtas}>
                   <Link href="/donate" className={s.btnPrimary}>
@@ -252,7 +252,7 @@ export default function Home() {
             <Reveal className={s.headRow}>
               <div>
                 <span className={s.kicker}>From our community</span>
-                <h2 className={s.h2}>What the work looks like</h2>
+                <h2 className={s.h2}>Stories from the field</h2>
               </div>
             </Reveal>
             <div className={s.grid3}>
