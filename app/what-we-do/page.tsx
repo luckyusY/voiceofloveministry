@@ -140,6 +140,53 @@ export default function WhatWeDoPage() {
           </div>
         </section>
 
+        <section className={s.section}>
+          <div className={s.container}>
+            <Reveal className={`${s.head} ${s.center}`} style={{ margin: "0 auto 2.6rem" }}>
+              <span className={`${s.kicker} ${s.kickerCenter}`}>See it in action</span>
+              <h2 className={s.h2}>Moments from our outreach</h2>
+              <p className={`${s.lead} ${s.center}`}>
+                Short clips from time spent with children and communities in East
+                Africa.
+              </p>
+            </Reveal>
+            <div className={s.videoRow}>
+              <Reveal as="figure" className={s.videoCard}>
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  poster="https://res.cloudinary.com/dzbu1g1b8/video/upload/so_2/voice-of-love/children-outreach-1.jpg"
+                >
+                  <source
+                    src="https://res.cloudinary.com/dzbu1g1b8/video/upload/q_auto/voice-of-love/children-outreach-1.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <figcaption className={s.videoCap}>Gathering with children</figcaption>
+              </Reveal>
+              <Reveal as="figure" className={s.videoCard} delay={90}>
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  poster="https://res.cloudinary.com/dzbu1g1b8/video/upload/so_2/voice-of-love/children-outreach-2.jpg"
+                >
+                  <source
+                    src="https://res.cloudinary.com/dzbu1g1b8/video/upload/q_auto/voice-of-love/children-outreach-2.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <figcaption className={s.videoCap}>Worship and encouragement</figcaption>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
         <section className={s.workPrograms}>
           <div className={s.container}>
             <Reveal className={`${s.head} ${s.center}`} style={{ margin: "0 auto 2.8rem" }}>
