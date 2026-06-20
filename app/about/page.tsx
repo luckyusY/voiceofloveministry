@@ -42,8 +42,9 @@ export default function AboutPage() {
               We want people to experience God&rsquo;s <em className={s.italicAccent}>love.</em>
             </h1>
             <p className={s.pageLede}>
-              We are a Christian ministry serving children, families, and
-              communities through teaching, worship, prayer, and practical care.
+              We&rsquo;re a Christian ministry that serves children, families, and
+              whole communities — through teaching, worship, prayer, and showing
+              up when life gets hard.
             </p>
           </div>
         </div>

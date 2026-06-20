@@ -83,9 +83,9 @@ export default function DonatePage() {
               Help us stay present in a child&rsquo;s <em className={s.italicAccent}>life.</em>
             </h1>
             <p className={s.pageLede}>
-              Your gift supports teaching, worship, community visits, and
-              practical care for children and families. Choose an amount and
-              where you would like it to go.
+              Your gift keeps us present in children&rsquo;s lives — the teaching,
+              the worship, the visits, and the everyday care families rely on.
+              Choose an amount below, and where you&rsquo;d like it to go.
             </p>
           </div>
         </div>
@@ -284,8 +284,9 @@ export default function DonatePage() {
               <span className={`${s.kicker} ${s.kickerCenter}`}>How funds are used</span>
               <h2 className={s.h2}>Where your gift goes</h2>
               <p className={`${s.lead} ${s.center}`}>
-                Donations are divided between direct ministry work, worship,
-                family support, and the basic costs of running the organization.
+                We handle every gift with care. Most of it goes straight to the
+                children, families, and communities we serve — here&rsquo;s the
+                breakdown.
               </p>
             </Reveal>
             <div className={s.alloc}>
