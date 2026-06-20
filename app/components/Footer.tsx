@@ -48,6 +48,11 @@ export default function Footer() {
               A Christian ministry serving children and families through
               teaching, worship, prayer, and practical care.
             </p>
+            <p>
+              <a href="mailto:Danymuhinda1@gmail.com">Danymuhinda1@gmail.com</a>
+              <br />
+              <a href="tel:+15209069946">+1 (520) 906-9946</a>
+            </p>
             <div className={styles.socials}>
               <a href="#" aria-label="Facebook">Facebook</a>
               <a href="#" aria-label="Instagram">Instagram</a>

@@ -51,6 +51,18 @@ export default function ContactPage() {
                 <div className={s.contactList}>
                   <p><strong>Headquarters</strong><br />United States</p>
                   <p><strong>Operations</strong><br />Uganda · Rwanda · Kenya</p>
+                  <p>
+                    <strong>Email</strong><br />
+                    <a href="mailto:Danymuhinda1@gmail.com" className={s.textLink}>
+                      Danymuhinda1@gmail.com
+                    </a>
+                  </p>
+                  <p>
+                    <strong>Phone</strong><br />
+                    <a href="tel:+15209069946" className={s.textLink}>
+                      +1 (520) 906-9946
+                    </a>
+                  </p>
                 </div>
               </Reveal>
               <Reveal className={s.formCard} delay={100}>

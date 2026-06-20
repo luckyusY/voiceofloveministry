@@ -185,6 +185,8 @@
 .footerBrand .brand { margin-bottom: 1rem; }
 .footerBrand .brandText { color: #fff; }
 .footerBrand p { font-size: .95rem; max-width: 36ch; line-height: 1.6; }
+.footerBrand > p + p { margin-top: .8rem; }
+.footerBrand p a:hover { color: #fff; }
 .socials { display: flex; gap: 1.2rem; margin-top: 1.2rem; }
 .socials a { font-family: var(--font-body); font-size: .82rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: rgba(255,255,255,.8); }
 .socials a:hover { color: var(--gold-soft); }

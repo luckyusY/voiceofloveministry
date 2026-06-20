@@ -56,16 +56,20 @@ export default function AboutPage() {
             <div className={s.split}>
               <Reveal className={s.splitMedia}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/leaders.jpg" alt="The Voice of Love leadership" loading="lazy" />
+                <img
+                  src="/images/founders.jpg"
+                  alt="Founders Daniel Ndasumbwa and Patience Mwamikazi serving together"
+                  loading="lazy"
+                />
               </Reveal>
               <Reveal delay={100}>
-                <span className={s.kicker}>Our story</span>
-                <h2 className={s.h2}>Our faith should be visible in how we live.</h2>
+                <span className={s.kicker}>Our founders</span>
+                <h2 className={s.h2}>Daniel Ndasumbwa &amp; Patience Mwamikazi</h2>
                 <p className={s.lead}>
-                  The Voice of Love Ministry began with a simple conviction:
-                  preaching about God's love is not enough. People should meet
-                  that love in the way we welcome them, pray with them, teach
-                  their children, and help when life is hard.
+                  Daniel and Patience founded The Voice of Love Ministry with a
+                  simple conviction: preaching about God's love is not enough.
+                  People should meet that love in the way we welcome them, pray
+                  with them, teach their children, and help when life is hard.
                 </p>
                 <p style={{ marginTop: "1.1rem", color: "var(--ink-soft)" }}>
                   <strong style={{ color: "var(--ink)" }}>Our vision:</strong> to
