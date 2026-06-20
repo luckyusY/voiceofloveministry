@@ -32,7 +32,7 @@ export default function Header() {
     <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ""}`}>
       <div className={styles.topbarWrap}>
         <div className={styles.topbar}>
-          <span>Speaking God&rsquo;s love to every heart, home &amp; nation</span>
+          <span>Serving children and families through faith and practical care</span>
           <Link href="/donate">Give monthly &rsaquo;</Link>
         </div>
       </div>

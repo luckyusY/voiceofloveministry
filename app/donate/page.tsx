@@ -10,18 +10,18 @@ import s from "../ui.module.css";
 const AMOUNTS = [20, 50, 100, 250, 500];
 
 const IMPACT: Record<number, string> = {
-  20: "helps provide worship materials and encouragement to a family of faith.",
-  50: "supports outreach and practical relief in a community for a week.",
-  100: "helps carry the message of love through music and ministry events.",
-  250: "sponsors compassionate relief for families in need across East Africa.",
-  500: "fuels worship, outreach, and family support across multiple nations.",
+  20: "goes toward teaching materials and children's activities.",
+  50: "helps cover a children's gathering or community visit.",
+  100: "supports travel, teaching, worship, and practical care.",
+  250: "helps the ministry plan and carry out a larger outreach visit.",
+  500: "supports ongoing work with children and families across our locations.",
 };
 
 const DESIGNATIONS = [
   "Where most needed",
   "Worship & Music",
   "Family of Faith",
-  "Compassion & Relief",
+  "Children & Families",
 ];
 
 const FAQS = [
@@ -31,7 +31,7 @@ const FAQS = [
   },
   {
     q: "Can I give monthly?",
-    a: "Absolutely — and monthly giving is the most powerful way to help. It gives steady, predictable support so we can plan worship, outreach, and relief throughout the year. You can change or cancel anytime.",
+    a: "Yes. Monthly gifts give us a steadier budget for visits, teaching, worship, and practical support. You can change or cancel your gift at any time.",
   },
   {
     q: "Is my gift tax-deductible?",
@@ -39,11 +39,11 @@ const FAQS = [
   },
   {
     q: "Where does my money go?",
-    a: "Your gift supports worship and music ministry, families of faith, and compassionate relief across the United States, Uganda, Rwanda, and Kenya. See the breakdown above.",
+    a: "Your gift supports children's ministry, teaching, worship, community visits, and practical care. You can choose a specific area or let us use it where it is most needed.",
   },
   {
     q: "How do I cancel or change a monthly gift?",
-    a: "You can manage your monthly gift anytime through the link in your confirmation email, or by contacting us — we're always glad to help.",
+    a: "Use the link in your confirmation email, or contact us and we will help you make the change.",
   },
 ];
 
@@ -79,15 +79,14 @@ export default function DonatePage() {
             <div className={s.crumb}>
               <Link href="/">Home</Link> <span>/</span> <span>Donate</span>
             </div>
-            <span className={s.kicker}>Be the voice of love</span>
+            <span className={s.kicker}>Give to the work</span>
             <h1 className={s.pageTitle}>
-              Your gift speaks <em className={s.italicAccent}>love</em> to a
-              waiting world.
+              Help us stay present in a child&rsquo;s <em className={s.italicAccent}>life.</em>
             </h1>
             <p className={s.pageLede}>
-              In a few simple steps, you can help carry hope, faith, and
-              compassion from the United States to East Africa. Choose how
-              you&rsquo;d like to give below.
+              Your gift supports teaching, worship, community visits, and
+              practical care for children and families. Choose an amount and
+              where you would like it to go.
             </p>
           </div>
         </div>
@@ -117,7 +116,7 @@ export default function DonatePage() {
                       className={freq === "monthly" ? s.freqActive : ""}
                       onClick={() => setFreq("monthly")}
                     >
-                      <span className={s.recommend}>Most impact</span>
+                      <span className={s.recommend}>Steady support</span>
                       Give monthly
                     </button>
                   </div>
@@ -258,8 +257,8 @@ export default function DonatePage() {
                     onChange={(e) => setCoverFees(e.target.checked)}
                   />
                   <span>
-                    Add a little to cover transaction fees so 100% of my gift
-                    reaches the mission.
+                    Add the transaction fee so the ministry receives the full
+                    amount of my gift.
                   </span>
                 </label>
 
@@ -283,11 +282,11 @@ export default function DonatePage() {
         <section className={s.section} style={{ background: "var(--bg-alt)", paddingTop: "clamp(3rem,7vh,5rem)" }}>
           <div className={s.container}>
             <Reveal className={`${s.head} ${s.center}`} style={{ margin: "0 auto 2.8rem" }}>
-              <span className={`${s.kicker} ${s.kickerCenter}`}>Transparency</span>
+              <span className={`${s.kicker} ${s.kickerCenter}`}>How funds are used</span>
               <h2 className={s.h2}>Where your gift goes</h2>
               <p className={`${s.lead} ${s.center}`}>
-                We steward every gift with care. Here&rsquo;s how donations are put
-                to work across the ministry.
+                Donations are divided between direct ministry work, worship,
+                family support, and the basic costs of running the organization.
               </p>
             </Reveal>
             <div className={s.alloc}>
@@ -318,9 +317,9 @@ export default function DonatePage() {
             </Reveal>
             <div className={s.ways}>
               {[
-                ["Become a monthly partner", "Steady monthly support is the most powerful way to sustain the mission all year long.", <Calendar key="c" />],
-                ["Give by bank transfer", "Prefer a direct transfer? Contact us and we'll share our account details.", <Bank key="b" />],
-                ["Sponsor an outreach", "Fund a specific worship event, relief effort, or community in East Africa.", <Globe key="g" />],
+                ["Give each month", "A regular gift helps us plan visits and ministry activities with a dependable budget.", <Calendar key="c" />],
+                ["Give by bank transfer", "Contact us for the account details if you prefer to send your gift directly.", <Bank key="b" />],
+                ["Support an outreach", "Help cover a children's gathering, worship event, community visit, or practical need.", <Globe key="g" />],
               ].map(([title, text, icon]) => (
                 <Reveal className={s.wayCard} key={title as string}>
                   <span className={s.wayIcon}>{icon as React.ReactNode}</span>
@@ -367,8 +366,8 @@ export default function DonatePage() {
             <Reveal as="figure">
               <Heart big />
               <blockquote>
-                Together, we are the voice of love — and your generosity helps it be
-                heard in every nation.
+                Thank you for trusting us with your gift. We will use it carefully
+                and keep the children and families we serve at the centre.
               </blockquote>
               <figcaption>Thank you for standing with us</figcaption>
             </Reveal>

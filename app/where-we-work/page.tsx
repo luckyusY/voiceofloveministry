@@ -8,7 +8,7 @@ import s from "../ui.module.css";
 export const metadata: Metadata = {
   title: "Where We Work",
   description:
-    "From our headquarters in the United States to outreach across Uganda, Rwanda, and Kenya — one family carrying the voice of love across two continents.",
+    "The Voice of Love Ministry serves from the United States and works alongside communities in Uganda, Rwanda, and Kenya.",
 };
 
 const COUNTRIES = [
@@ -16,25 +16,25 @@ const COUNTRIES = [
     name: "United States",
     role: "Headquarters",
     img: "/images/audience.jpg",
-    text: "Our home base — where worship, leadership, and our global vision are nurtured. From here we gather as a family, raise support, and send love to the nations.",
+    text: "Our United States base supports ministry leadership, worship, fundraising, and the relationships that make our work in East Africa possible.",
   },
   {
     name: "Uganda",
     role: "Main operations",
     img: "/images/teaching.jpg",
-    text: "The heart of our outreach on the ground. We gather communities, teach, encourage, and walk alongside families through every season of life.",
+    text: "Uganda is the centre of our work in East Africa. Here we gather with children and families for teaching, worship, prayer, and practical support.",
   },
   {
     name: "Rwanda",
     role: "Outreach",
     img: "/images/outreach-women.jpg",
-    text: "Walking with communities through relief, encouragement, and the message of love — standing especially with women and families.",
+    text: "In Rwanda, we spend time with local communities and support outreach focused on women, children, and families.",
   },
   {
     name: "Kenya",
     role: "Outreach",
     img: "/images/field.jpg",
-    text: "Sharing hope, provision, and faith with families and young people, carrying the voice of love into new communities.",
+    text: "Our work in Kenya is growing through relationships with families and young people, with an emphasis on faith and practical care.",
   },
 ];
 
@@ -51,12 +51,12 @@ export default function WhereWeWorkPage() {
             </div>
             <span className={s.kicker}>Where we work</span>
             <h1 className={s.pageTitle}>
-              One family across <em className={s.italicAccent}>two continents.</em>
+              Local relationships across <em className={s.italicAccent}>four countries.</em>
             </h1>
             <p className={s.pageLede}>
-              From our headquarters in the United States to our outreach across East
-              Africa, the voice of love is carried by one family with one heart —
-              in worship, in service, and in love.
+              Our ministry is connected across distance, but the work is always
+              personal. It happens through people who know their communities and
+              choose to serve them faithfully.
             </p>
           </div>
         </div>
@@ -88,8 +88,8 @@ export default function WhereWeWorkPage() {
           <div className={s.container}>
             <Reveal as="figure">
               <blockquote>
-                Wherever there is a heart waiting for hope, the voice of love can
-                be heard. Help us reach further.
+                Strong ministry begins with trust. Help us keep building the
+                relationships that make lasting care possible.
               </blockquote>
               <figcaption>
                 <Link href="/donate" className={s.btnPrimary} style={{ marginTop: "1.5rem" }}>

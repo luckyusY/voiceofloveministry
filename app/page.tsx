@@ -6,10 +6,10 @@ import NewsletterForm from "./components/NewsletterForm";
 import s from "./ui.module.css";
 
 const PROGRAMS = [
-  { tag: "Children & Youth", title: "Walking with children and young people", text: "We pour love into children and youth through teaching, mentorship, music, and tender care.", img: "/images/children-gathering.jpg" },
-  { tag: "Word & Worship", title: "Love through words, actions & music", text: "We carry the message of love through preaching, song, and everyday kindness.", img: "/images/band.jpg" },
-  { tag: "Family of Faith", title: "A family that prays for one another", text: "A community where every child and family is welcomed, encouraged, and held in prayer.", img: "/images/congregation.jpg" },
-  { tag: "Compassion in Action", title: "Serving with compassion & unity", text: "Standing with the vulnerable — bringing practical help where it's needed most.", img: "/images/outreach-women.jpg" },
+  { tag: "Children & Youth", title: "Time, care, and guidance for children", text: "We teach, listen, sing, and spend time with children so they know they matter to God and to us.", img: "/images/children-gathering.jpg" },
+  { tag: "Word & Worship", title: "Faith shared in words and song", text: "We gather to pray, read God's Word, and worship together in ways that welcome every generation.", img: "/images/band.jpg" },
+  { tag: "Family of Faith", title: "A church family that stays close", text: "We make room for people to belong, pray for one another, and carry burdens together.", img: "/images/congregation.jpg" },
+  { tag: "Practical Care", title: "Help for everyday needs", text: "When a child or family needs practical support, we respond with what we have and remain present.", img: "/images/outreach-women.jpg" },
 ];
 
 const COUNTRIES = [
@@ -19,18 +19,17 @@ const COUNTRIES = [
   { name: "Kenya", role: "Outreach", img: "/images/field.jpg" },
 ];
 
-// NOTE: figures are placeholders — replace with Voice of Love's real numbers.
 const STATS = [
-  { n: "1,000+", label: "Children & young people encouraged" },
-  { n: "4", label: "Nations across two continents" },
-  { n: "25+", label: "Communities served together" },
-  { n: "100%", label: "Driven by faith, hope & love" },
+  { n: "Children", label: "Known by name and welcomed" },
+  { n: "4", label: "Countries connected by one ministry" },
+  { n: "Faith", label: "Shared through teaching and worship" },
+  { n: "Care", label: "Given in practical, personal ways" },
 ];
 
 const STORIES = [
-  { cat: "Children", date: "Outreach", title: "Bringing teaching, song, and hope to children in East Africa", img: "/images/children-outreach.jpg" },
-  { cat: "Testimony", date: "Recent", title: "“Love gave me a family when I had none.”", img: "/images/congregation.jpg" },
-  { cat: "Worship", date: "Ongoing", title: "How music is carrying God's love across nations", img: "/images/worship-raise.jpg" },
+  { cat: "Children", date: "Outreach", title: "A day of teaching, singing, and time together", img: "/images/children-outreach.jpg" },
+  { cat: "Church Family", date: "Community", title: "Why prayer and belonging matter in difficult seasons", img: "/images/congregation.jpg" },
+  { cat: "Worship", date: "Music", title: "Making room for every generation to worship", img: "/images/worship-raise.jpg" },
 ];
 
 export default function Home() {
@@ -42,22 +41,22 @@ export default function Home() {
         <section className={s.hero}>
           <div className={s.container}>
             <div className={s.heroContent}>
-              <span className={s.flag}>A community built on God&rsquo;s love</span>
+              <span className={s.flag}>Faith that is lived, not only spoken</span>
               <h1 className={s.heroTitle}>
-                The voice of <em className={s.italicAccent}>love</em>, heard in
-                every nation.
+                Let God&rsquo;s <em className={s.italicAccent}>love</em> be something
+                people can feel.
               </h1>
               <p className={s.heroText}>
-                Love is the greatest voice that can heal hearts and restore hope.
-                We stand with children, families, and communities — sharing
-                God&rsquo;s love from the United States to East Africa.
+                We serve children and families through teaching, worship,
+                mentorship, prayer, and practical care in the United States and
+                East Africa.
               </p>
               <div className={s.heroCtas}>
                 <Link href="/donate" className={s.btnPrimary}>
                   Donate now <Arrow />
                 </Link>
                 <Link href="/about" className={s.btnOutline}>
-                  Discover our story
+                  Meet the ministry
                 </Link>
               </div>
             </div>
@@ -87,10 +86,10 @@ export default function Home() {
           <div className={s.container}>
             <Reveal className={s.head}>
               <span className={s.kicker}>What we do</span>
-              <h2 className={s.h2}>How we share God&rsquo;s love</h2>
+              <h2 className={s.h2}>What our ministry looks like in practice</h2>
               <p className={s.lead}>
-                Our mission is to spread love through words, actions, and service —
-                building a family of faith that lifts up every person.
+                We believe words matter most when our actions agree with them.
+                This is how we put our faith to work.
               </p>
             </Reveal>
             <div className={s.grid4}>
@@ -105,7 +104,7 @@ export default function Home() {
                     <h3 className={s.h3}>{p.title}</h3>
                     <p>{p.text}</p>
                     <Link href="/donate" className={s.textLink}>
-                      Support this <Arrow />
+                      Help this work <Arrow />
                     </Link>
                   </div>
                 </Reveal>
@@ -119,20 +118,18 @@ export default function Home() {
           <div className={s.container}>
             <div className={s.split}>
               <Reveal>
-                <span className={s.kicker}>Our heart for children</span>
+                <span className={s.kicker}>Why children come first</span>
                 <h2 className={s.h2}>
-                  Every child deserves to know they are{" "}
-                  <em className={s.italicAccent}>loved.</em>
+                  A child should never have to wonder whether they{" "}
+                  <em className={s.italicAccent}>matter.</em>
                 </h2>
                 <p className={s.lead}>
-                  Children and young people are at the heart of our mission. Across
-                  Uganda, Rwanda, and Kenya we walk with them through teaching,
-                  mentorship, worship, and practical care — helping them grow up
-                  knowing they are seen, valued, and loved by God.
+                  We spend time with children in Uganda, Rwanda, and Kenya. We
+                  listen to them, teach God's Word, sing together, offer guidance,
+                  and help with practical needs when we can.
                 </p>
                 <p className={s.lead}>
-                  Your gift helps provide encouragement, song, and support to a
-                  child today.
+                  A gift helps us return, build trust, and keep that care going.
                 </p>
                 <p style={{ marginTop: "1.6rem" }}>
                   <Link href="/donate" className={s.btnPrimary}>
@@ -153,14 +150,13 @@ export default function Home() {
           <div className={s.container}>
             <div className={s.giveGrid}>
               <Reveal>
-                <span className={s.kicker}>Be the voice of love</span>
+                <span className={s.kicker}>Give with us</span>
                 <h2 className={s.h2}>
-                  Your gift helps love reach <em className={s.italicAccent}>further.</em>
+                  Help us be there, and keep <em className={s.italicAccent}>coming back.</em>
                 </h2>
                 <p className={s.lead}>
-                  We depend on people who believe love can change the world. Every
-                  gift supports children and families, worship, and compassionate
-                  relief across two continents.
+                  Your support pays for children's gatherings, teaching,
+                  worship, outreach, and practical help for families.
                 </p>
                 <div className={s.heroCtas}>
                   <Link href="/donate" className={s.btnPrimary}>
@@ -172,8 +168,8 @@ export default function Home() {
                 </div>
               </Reveal>
               <Reveal className={s.giveCard} delay={100}>
-                <span className={s.cardTag}>Make a difference</span>
-                <h3 className={s.h3}>Choose an amount to begin</h3>
+                <span className={s.cardTag}>Choose a gift</span>
+                <h3 className={s.h3}>Start with what feels right</h3>
                 <div className={s.quickAmounts}>
                   <Link href="/donate">$20</Link>
                   <Link href="/donate">$50</Link>
@@ -196,7 +192,7 @@ export default function Home() {
             <Reveal className={s.headRow}>
               <div>
                 <span className={s.kicker}>Where we work</span>
-                <h2 className={s.h2}>One family across two continents</h2>
+                <h2 className={s.h2}>Rooted in four countries</h2>
               </div>
               <Link href="/where-we-work" className={s.btnOutline}>
                 Explore our regions
@@ -228,12 +224,12 @@ export default function Home() {
                 <img src="/images/team.jpg" alt="The Voice of Love team" loading="lazy" />
               </Reveal>
               <Reveal delay={100}>
-                <span className={s.kicker}>Who we are</span>
-                <h2 className={s.h2}>A family carrying the message of God&rsquo;s love.</h2>
+                <span className={s.kicker}>The people behind the work</span>
+                <h2 className={s.h2}>One ministry, shaped by faith and service.</h2>
                 <p className={s.lead}>
-                  We believe love is the greatest voice that can heal hearts,
-                  restore hope, and unite people across all nations — heard in every
-                  heart, every home, and every nation.
+                  We are pastors, worshippers, volunteers, friends, and partners
+                  who believe the love of God should be visible in the way we
+                  treat people.
                 </p>
                 <div className={s.chips}>
                   {["Love", "Faith", "Unity", "Service", "Truth"].map((v) => (
@@ -255,8 +251,8 @@ export default function Home() {
           <div className={s.container}>
             <Reveal className={s.headRow}>
               <div>
-                <span className={s.kicker}>Latest</span>
-                <h2 className={s.h2}>Stories of love at work</h2>
+                <span className={s.kicker}>From our community</span>
+                <h2 className={s.h2}>What the work looks like</h2>
               </div>
             </Reveal>
             <div className={s.grid3}>
@@ -285,9 +281,8 @@ export default function Home() {
             <Reveal as="figure">
               <Quote />
               <blockquote>
-                We are The Voice of Love Ministry — a generation chosen to speak
-                God&rsquo;s love, to bring hope to the hopeless, and to unite the
-                world through the power of love.
+                We want our words, our worship, and the way we care for people to
+                tell the same story: God loves them, and they are not alone.
               </blockquote>
               <figcaption>Our Declaration</figcaption>
             </Reveal>
@@ -299,8 +294,8 @@ export default function Home() {
           <div className={s.container}>
             <div className={s.newsInner}>
               <div>
-                <h2 className={s.h2} style={{ color: "#fff" }}>Join the family</h2>
-                <p>Get updates, prayer, and ways to get involved in your inbox.</p>
+                <h2 className={s.h2} style={{ color: "#fff" }}>Stay close to the work</h2>
+                <p>Receive ministry news, prayer needs, and simple ways to take part.</p>
               </div>
               <NewsletterForm />
             </div>

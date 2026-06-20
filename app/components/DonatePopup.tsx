@@ -40,13 +40,14 @@ export default function DonatePopup() {
       <button className={styles.popupClose} aria-label="Close" onClick={dismiss}>
         ×
       </button>
-      <span className={styles.kicker}>Be the voice of love</span>
-      <h3 className={styles.h3}>Help a child today</h3>
+      <span className={styles.kicker}>Support the work</span>
+      <h3 className={styles.h3}>Help us return</h3>
       <p className={styles.popupText}>
-        Your gift brings teaching, song, and hope to children across East Africa.
+        Your gift supports children's gatherings, teaching, worship, and
+        practical care.
       </p>
       <div className={styles.quickAmounts}>
-        <Link href="/donate" onClick={dismiss}>$25</Link>
+        <Link href="/donate" onClick={dismiss}>$20</Link>
         <Link href="/donate" onClick={dismiss}>$50</Link>
         <Link href="/donate" onClick={dismiss}>$100</Link>
       </div>

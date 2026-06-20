@@ -15,7 +15,7 @@ export default function ContactForm() {
   if (done) {
     return (
       <p className={styles.thanks} style={{ color: "var(--red)" }}>
-        Thank you — your message has been received. We&rsquo;ll be in touch soon.
+        We received your message. Someone from the ministry will reply soon.
       </p>
     );
   }
@@ -32,7 +32,7 @@ export default function ContactForm() {
       </label>
       <label>
         <span>Message</span>
-        <textarea rows={5} required placeholder="How can we help?" />
+        <textarea rows={5} required placeholder="What would you like to talk about?" />
       </label>
       <button type="submit" className={`${styles.btnPrimary} ${styles.btnFull}`}>
         Send message

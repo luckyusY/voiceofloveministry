@@ -21,11 +21,11 @@ const body = Lora({
 
 export const metadata: Metadata = {
   title: {
-    default: "The Voice of Love Ministry — Speaking God's Love to Every Nation",
+    default: "The Voice of Love Ministry — Faith, Worship, and Care",
     template: "%s · The Voice of Love Ministry",
   },
   description:
-    "The Voice of Love Ministry is a community built on the message of God's love — spreading hope, faith, and compassion through worship, words, and service from the United States to East Africa.",
+    "The Voice of Love Ministry serves children and families through Christian teaching, worship, mentorship, prayer, and practical care.",
   keywords: [
     "The Voice of Love",
     "The Voice of Love Ministry",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "The Voice of Love Ministry",
     description:
-      "A generation chosen to speak God's love, bring hope to the hopeless, and unite the world through the power of love.",
+      "Christian teaching, worship, mentorship, prayer, and practical care for children and families.",
     type: "website",
   },
 };

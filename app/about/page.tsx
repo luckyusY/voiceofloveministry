@@ -8,22 +8,22 @@ import s from "../ui.module.css";
 export const metadata: Metadata = {
   title: "Who We Are",
   description:
-    "The Voice of Love Ministry is a community built on the message of God's love — our story, vision, mission, and values.",
+    "Meet The Voice of Love Ministry and learn how we serve children, families, and communities through faith, worship, and practical care.",
 };
 
 const MISSION = [
-  "To spread God's love through words, actions, and music.",
-  "To build a family of faith that supports and prays for one another.",
-  "To inspire people to live in forgiveness, kindness, and truth.",
-  "To serve communities with compassion and unity.",
+  "Teach God's Word in ways that children and families can carry into daily life.",
+  "Build a church family where people are known, supported, and prayed for.",
+  "Use music and worship to bring generations together in faith.",
+  "Respond to practical needs with care, honesty, and respect.",
 ];
 
 const VALUES = [
-  ["Love", "The heart of everything we do."],
-  ["Faith", "Trusting in God's power and promises."],
-  ["Unity", "Standing together as one family in Christ."],
-  ["Service", "Giving our time and hearts to help others."],
-  ["Truth", "Speaking and living honestly through God's Word."],
+  ["Love", "We treat every person as someone deeply loved by God."],
+  ["Faith", "We pray, trust God, and let His Word guide our decisions."],
+  ["Unity", "We work across cultures and countries without losing sight of one another."],
+  ["Service", "We give our time, attention, and resources where they are needed."],
+  ["Truth", "We speak plainly, keep our word, and handle every gift responsibly."],
 ];
 
 export default function AboutPage() {
@@ -39,12 +39,11 @@ export default function AboutPage() {
             </div>
             <span className={s.kicker}>Who we are</span>
             <h1 className={s.pageTitle}>
-              A family carrying the message of God&rsquo;s <em className={s.italicAccent}>love.</em>
+              We want people to experience God&rsquo;s <em className={s.italicAccent}>love.</em>
             </h1>
             <p className={s.pageLede}>
-              The Voice of Love Ministry is a community built on the belief that love
-              is the greatest voice — one that can heal hearts, restore hope, and
-              unite people across all nations.
+              We are a Christian ministry serving children, families, and
+              communities through teaching, worship, prayer, and practical care.
             </p>
           </div>
         </div>
@@ -61,18 +60,17 @@ export default function AboutPage() {
               </Reveal>
               <Reveal delay={100}>
                 <span className={s.kicker}>Our story</span>
-                <h2 className={s.h2}>Living, speaking, and sharing divine love.</h2>
+                <h2 className={s.h2}>Our faith should be visible in how we live.</h2>
                 <p className={s.lead}>
-                  We believe that love is the greatest voice that can heal hearts,
-                  restore hope, and unite people across all nations. Our purpose is
-                  to live, speak, and share this divine love through faith,
-                  compassion, and service.
+                  The Voice of Love Ministry began with a simple conviction:
+                  preaching about God's love is not enough. People should meet
+                  that love in the way we welcome them, pray with them, teach
+                  their children, and help when life is hard.
                 </p>
                 <p style={{ marginTop: "1.1rem", color: "var(--ink-soft)" }}>
-                  <strong style={{ color: "var(--ink)" }}>Our vision:</strong> to let
-                  the voice of love be heard in every heart, every home, and every
-                  nation — bringing light where there is darkness and peace where
-                  there is pain.
+                  <strong style={{ color: "var(--ink)" }}>Our vision:</strong> to
+                  grow a faithful ministry that knows people personally, serves
+                  them well, and points them to Christ.
                 </p>
               </Reveal>
             </div>
@@ -84,7 +82,7 @@ export default function AboutPage() {
           <div className={s.container}>
             <Reveal className={s.head}>
               <span className={s.kicker}>Our mission</span>
-              <h2 className={s.h2}>What we set out to do</h2>
+              <h2 className={s.h2}>The work we have committed to</h2>
             </Reveal>
             <div className={s.grid4}>
               {MISSION.map((m, i) => (
@@ -105,8 +103,8 @@ export default function AboutPage() {
         <section className={s.section}>
           <div className={s.container}>
             <Reveal className={s.head}>
-              <span className={s.kicker}>Our core values</span>
-              <h2 className={s.h2}>Five values at the heart of our family</h2>
+              <span className={s.kicker}>What guides us</span>
+              <h2 className={s.h2}>The standards we want to live by</h2>
             </Reveal>
             <div className={s.grid3}>
               {VALUES.map(([name, meaning], i) => (
@@ -130,9 +128,8 @@ export default function AboutPage() {
           <div className={s.container}>
             <Reveal as="figure">
               <blockquote>
-                We are The Voice of Love Ministry — a generation chosen to speak
-                God&rsquo;s love, to bring hope to the hopeless, and to unite the
-                world through the power of love.
+                May people recognize God's love not only in what we say, but in
+                the patience, honesty, and care we show them.
               </blockquote>
               <figcaption>Our Declaration</figcaption>
             </Reveal>
@@ -144,8 +141,8 @@ export default function AboutPage() {
           <div className={s.container}>
             <div className={s.newsInner}>
               <div>
-                <h2 className={s.h2} style={{ color: "#fff" }}>Stand with the mission</h2>
-                <p>Help the voice of love reach further across two continents.</p>
+                <h2 className={s.h2} style={{ color: "#fff" }}>Take part in the work</h2>
+                <p>Your gift helps us serve children and families with consistency.</p>
               </div>
               <Link href="/donate" className={s.btnPrimary}>
                 Donate now

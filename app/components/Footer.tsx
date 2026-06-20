@@ -8,7 +8,7 @@ const COLS: [string, [string, string][]][] = [
       ["Children & Youth", "/what-we-do"],
       ["Word & Worship", "/what-we-do"],
       ["Family of Faith", "/what-we-do"],
-      ["Compassion in Action", "/what-we-do"],
+      ["Practical Care", "/what-we-do"],
     ],
   ],
   [
@@ -45,8 +45,8 @@ export default function Footer() {
               </span>
             </Link>
             <p>
-              A generation chosen to speak God&rsquo;s love, bring hope to the
-              hopeless, and unite the world through the power of love.
+              A Christian ministry serving children and families through
+              teaching, worship, prayer, and practical care.
             </p>
             <div className={styles.socials}>
               <a href="#" aria-label="Facebook">Facebook</a>
@@ -67,7 +67,7 @@ export default function Footer() {
         </div>
         <div className={styles.footerBottom}>
           <span>© {new Date().getFullYear()} The Voice of Love Ministry. All rights reserved.</span>
-          <span>Speaking love to every heart, home, and nation.</span>
+          <span>Faith expressed through words, worship, and care.</span>
         </div>
       </div>
     </footer>
