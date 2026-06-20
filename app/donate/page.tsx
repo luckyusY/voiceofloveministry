@@ -19,9 +19,8 @@ const IMPACT: Record<number, string> = {
 
 const DESIGNATIONS = [
   "Where most needed",
-  "Worship & Music",
-  "Family of Faith",
   "Children & Families",
+  "Worship & Music",
 ];
 
 const FAQS = [
