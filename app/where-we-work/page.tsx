@@ -8,7 +8,7 @@ import s from "../ui.module.css";
 export const metadata: Metadata = {
   title: "Where We Work",
   description:
-    "The Voice of Love Ministry serves from the United States and works alongside communities in Uganda, Rwanda, and Kenya.",
+    "The Voice of Love Ministry serves from the United States and works alongside communities in Uganda, Rwanda, Kenya, and the DR Congo.",
 };
 
 const COUNTRIES = [
@@ -36,6 +36,12 @@ const COUNTRIES = [
     img: "/images/field.jpg",
     text: "Our work in Kenya is growing through relationships with families and young people, with an emphasis on faith and practical care.",
   },
+  {
+    name: "DR Congo",
+    role: "Outreach",
+    img: "/images/children-community.jpg",
+    text: "In the Democratic Republic of Congo, we walk with children and families in communities facing real hardship — bringing faith, encouragement, and practical care.",
+  },
 ];
 
 export default function WhereWeWorkPage() {
@@ -51,7 +57,7 @@ export default function WhereWeWorkPage() {
             </div>
             <span className={s.kicker}>Where we work</span>
             <h1 className={s.pageTitle}>
-              Local relationships across <em className={s.italicAccent}>four countries.</em>
+              Local relationships across <em className={s.italicAccent}>five countries.</em>
             </h1>
             <p className={s.pageLede}>
               Our ministry is connected across distance, but the work is always

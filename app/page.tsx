@@ -17,19 +17,38 @@ const COUNTRIES = [
   { name: "Uganda", role: "Main operations", img: "/images/teaching.jpg" },
   { name: "Rwanda", role: "Outreach", img: "/images/outreach-women.jpg" },
   { name: "Kenya", role: "Outreach", img: "/images/field.jpg" },
+  { name: "DR Congo", role: "Outreach", img: "/images/children-community.jpg" },
 ];
 
 const STATS = [
   { n: "Children", label: "Known by name, never a number" },
-  { n: "4", label: "Countries held together as one family" },
+  { n: "5", label: "Countries held together as one family" },
   { n: "Faith", label: "Shared in word, song, and prayer" },
   { n: "Care", label: "That shows up — and keeps coming back" },
 ];
 
 const STORIES = [
-  { cat: "Children", date: "Outreach", title: "A day of teaching, singing, and time together", img: "/images/children-outreach.jpg" },
-  { cat: "Church Family", date: "Community", title: "Why prayer and belonging matter in difficult seasons", img: "/images/congregation.jpg" },
-  { cat: "Worship", date: "Music", title: "Making room for every generation to worship", img: "/images/worship-raise.jpg" },
+  {
+    cat: "Children",
+    date: "Outreach",
+    title: "A day of teaching, singing, and time together",
+    text: "Our visits are unhurried — a Bible story, songs, games, and time to simply be with the children. The aim isn't a program; it's that every child leaves knowing they are loved.",
+    img: "/images/children-outreach.jpg",
+  },
+  {
+    cat: "Church Family",
+    date: "Community",
+    title: "Why prayer and belonging matter in hard seasons",
+    text: "Faith is easier to carry when you're not carrying it alone. Our church family prays for one another and shows up in the difficult seasons, not only the good ones.",
+    img: "/images/congregation.jpg",
+  },
+  {
+    cat: "Worship",
+    date: "Music",
+    title: "Making room for every generation to worship",
+    text: "From the youngest child to the oldest member, worship is where we meet together. Music gives everyone a voice — and a place in the family.",
+    img: "/images/worship-raise.jpg",
+  },
 ];
 
 export default function Home() {
@@ -124,7 +143,8 @@ export default function Home() {
                   <em className={s.italicAccent}>matter.</em>
                 </h2>
                 <p className={s.lead}>
-                  We spend time with children in Uganda, Rwanda, and Kenya. We
+                  We spend time with children in Uganda, Rwanda, Kenya, and the
+                  DR Congo. We
                   listen to them, teach God's Word, sing together, offer guidance,
                   and help with practical needs when we can.
                 </p>
@@ -192,7 +212,7 @@ export default function Home() {
             <Reveal className={s.headRow}>
               <div>
                 <span className={s.kicker}>Where we work</span>
-                <h2 className={s.h2}>Rooted in four countries</h2>
+                <h2 className={s.h2}>Rooted in five countries</h2>
               </div>
               <Link href="/where-we-work" className={s.btnOutline}>
                 Explore our regions

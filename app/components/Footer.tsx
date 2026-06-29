@@ -18,6 +18,7 @@ const COLS: [string, [string, string][]][] = [
       ["Uganda", "/where-we-work"],
       ["Rwanda", "/where-we-work"],
       ["Kenya", "/where-we-work"],
+      ["DR Congo", "/where-we-work"],
     ],
   ],
   [

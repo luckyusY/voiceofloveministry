@@ -50,7 +50,7 @@ export default function ContactPage() {
                 </p>
                 <div className={s.contactList}>
                   <p><strong>Headquarters</strong><br />United States</p>
-                  <p><strong>Operations</strong><br />Uganda · Rwanda · Kenya</p>
+                  <p><strong>Operations</strong><br />Uganda · Rwanda · Kenya · DR Congo</p>
                   <p>
                     <strong>Email</strong><br />
                     <a href="mailto:Danymuhinda1@gmail.com" className={s.textLink}>

@@ -38,6 +38,8 @@ export const metadata: Metadata = {
     "Uganda",
     "Rwanda",
     "Kenya",
+    "DR Congo",
+    "Democratic Republic of Congo",
   ],
   authors: [{ name: "The Voice of Love Ministry" }],
   openGraph: {
